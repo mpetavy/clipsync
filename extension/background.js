@@ -21,3 +21,13 @@ chrome.alarms.onAlarm.addListener((alarm) => {
     fetchBookmarks();
   }
 });
+
+chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+  if (message.action === "sync") {
+    fetchBookmarks().then(() => {
+      console.log("Bookmarks synced!");
+      sendResponse({ status: "success" });
+    });
+    return true;
+  }
+});
