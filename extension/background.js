@@ -1,6 +1,6 @@
 async function fetchBookmarks() {
   try {
-    const response = await fetch("https://example.com/bookmarks.json");
+    const response = await fetch("http://localhost:8080/get");
     const bookmarks = await response.json();
     await updateBookmarks(bookmarks);
   } catch (error) {

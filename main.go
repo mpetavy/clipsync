@@ -3,6 +3,7 @@ package main
 import (
 	"embed"
 	"github.com/mpetavy/common"
+	"github.com/rs/cors"
 	"net/http"
 	"os"
 	"strconv"
@@ -55,10 +56,13 @@ func setHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func run() error {
-	http.HandleFunc("/get", getHandler)
-	http.HandleFunc("/set", setHandler)
+	mux := http.NewServeMux()
+	mux.HandleFunc("/get", getHandler)
+	mux.HandleFunc("/set", setHandler)
 
-	err := http.ListenAndServe(":6666", nil)
+	handler := cors.Default().Handler(mux)
+
+	err := http.ListenAndServe(":8080", handler)
 	if common.Error(err) {
 		return err
 	}
