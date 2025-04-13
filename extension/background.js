@@ -1,3 +1,17 @@
+async function exportBookmarksAsJSON() {
+  try {
+    const bookmarkTree = await chrome.bookmarks.getTree();
+
+    const jsonString = JSON.stringify(bookmarkTree, null, 2);
+
+    console.log(jsonString);
+
+    return jsonString;
+  } catch (error) {
+    console.error("Failed to export bookmarks:", error);
+  }
+}
+
 async function fetchBookmarks() {
   try {
     const response = await fetch("http://localhost:8080/get");
@@ -24,6 +38,10 @@ chrome.alarms.onAlarm.addListener((alarm) => {
 
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === "sync") {
+    exportBookmarksAsJSON();
+
+    return true;
+
     fetchBookmarks().then(() => {
       console.log("Bookmarks synced!");
       sendResponse({ status: "success" });
