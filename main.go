@@ -52,7 +52,6 @@ func getHandler(w http.ResponseWriter, r *http.Request) {
 
 func setHandler(w http.ResponseWriter, r *http.Request) {
 	common.DebugFunc()
-
 }
 
 func run() error {
