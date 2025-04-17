@@ -2,7 +2,10 @@ module websync
 
 go 1.24.1
 
-require github.com/mpetavy/common v1.10.12
+require (
+	github.com/mpetavy/common v1.10.13
+	github.com/rs/cors v1.11.1
+)
 
 require (
 	github.com/bahlo/generic-list-go v0.2.0 // indirect
@@ -32,7 +35,6 @@ require (
 	github.com/paulrosania/go-charset v0.0.0-20190326053356-55c9d7a5834c // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/quasoft/memstore v0.0.0-20191010062613-2bce066d2b0b // indirect
-	github.com/rs/cors v1.11.1 // indirect
 	github.com/saintfish/chardet v0.0.0-20230101081208-5e3ef4b5456d // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v1.2.2 // indirect
