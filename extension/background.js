@@ -6,8 +6,20 @@ async function exportBookmarksAsJSON() {
 
     console.log(jsonString);
 
-    return jsonString;
-  } catch (error) {
+    const response = await fetch("http://localhost:8080/set", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: jsonString
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    console.log("Bookmarks successfully sent to the server.");
+    return jsonString;  } catch (error) {
     console.error("Failed to export bookmarks:", error);
   }
 }

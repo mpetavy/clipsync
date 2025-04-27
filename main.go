@@ -2,11 +2,14 @@ package main
 
 import (
 	"embed"
+	"encoding/json"
+	"fmt"
 	"github.com/mpetavy/common"
 	"github.com/rs/cors"
 	"net/http"
 	"os"
 	"strconv"
+	"time"
 )
 
 //go:embed go.mod
@@ -50,8 +53,39 @@ func getHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+func BookmarkDate(v int64) time.Time {
+	return time.Unix(0, v*1000*int64(time.Microsecond))
+}
+
 func setHandler(w http.ResponseWriter, r *http.Request) {
 	common.DebugFunc()
+
+	err := func() error {
+		ba, err := common.ReadBody(r.Body)
+		if common.Error(err) {
+			return err
+		}
+
+		fmt.Printf("%s\n", ba)
+
+		b := &Bookmarks{}
+
+		err = json.Unmarshal(ba, b.Children)
+		if common.Error(err) {
+			return err
+		}
+
+		fmt.Printf("%v\n", BookmarkDate(b.DateAdded))
+
+		return nil
+	}()
+
+	switch err {
+	case nil:
+		common.Error(common.HTTPResponse(w, r, http.StatusOK, "", 0, nil))
+	default:
+		http.Error(w, err.Error(), http.StatusBadRequest)
+	}
 }
 
 func run() error {
