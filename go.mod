@@ -3,7 +3,7 @@ module websync
 go 1.24.1
 
 require (
-	github.com/mpetavy/common v1.10.29
+	github.com/mpetavy/common v1.10.30
 	github.com/rs/cors v1.11.1
 )
 
