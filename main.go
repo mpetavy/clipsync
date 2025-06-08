@@ -23,7 +23,7 @@ func init() {
 	common.Init("", "", "", "", "", "", "", "", &resources, nil, nil, run, 0)
 }
 
-func getHandler(w http.ResponseWriter, r *http.Request) {
+func getBookmarkHandler(w http.ResponseWriter, r *http.Request) {
 	common.DebugFunc()
 
 	sb, err := func() (*common.SwapBuffer, error) {
@@ -57,7 +57,7 @@ func BookmarkDate(v int64) time.Time {
 	return time.Unix(0, v*1000*int64(time.Microsecond))
 }
 
-func setHandler(w http.ResponseWriter, r *http.Request) {
+func setBookmarkHandler(w http.ResponseWriter, r *http.Request) {
 	common.DebugFunc()
 
 	err := func() error {
@@ -90,8 +90,8 @@ func setHandler(w http.ResponseWriter, r *http.Request) {
 
 func run() error {
 	mux := http.NewServeMux()
-	mux.HandleFunc("/get", getHandler)
-	mux.HandleFunc("/set", setHandler)
+	mux.HandleFunc("/get", getBookmarkHandler)
+	mux.HandleFunc("/set", setBookmarkHandler)
 
 	handler := cors.Default().Handler(mux)
 

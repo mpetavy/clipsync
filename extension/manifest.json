@@ -4,7 +4,7 @@
   "version": "1.0",
   "description": "Syncs bookmarks from a remote server.",
   "permissions": ["bookmarks", "storage", "alarms"],
-  "host_permissions": ["http://*","https://*"],
+  "host_permissions": ["http://*", "https://*"],
   "background": {
     "service_worker": "background.js"
   },
