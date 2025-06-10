@@ -2,21 +2,20 @@ package main
 
 import (
 	"embed"
-	"encoding/json"
-	"fmt"
 	"github.com/mpetavy/common"
 	"github.com/rs/cors"
+	"io"
 	"net/http"
 	"os"
 	"strconv"
-	"time"
 )
 
 //go:embed go.mod
 var resources embed.FS
 
 const (
-	BookmarkFile = "bookmarks_3_24_25.html"
+	//BookmarkFile = "bookmarks_3_24_25.html"
+	BookmarkFile = "bookmarks.html"
 )
 
 func init() {
@@ -26,56 +25,62 @@ func init() {
 func getBookmarkHandler(w http.ResponseWriter, r *http.Request) {
 	common.DebugFunc()
 
-	sb, err := func() (*common.SwapBuffer, error) {
-		sb := common.NewSwapBuffer()
-
-		ba, err := os.ReadFile(BookmarkFile)
-		if common.Error(err) {
-			return nil, err
+	file, size, err := func() (io.ReadCloser, int64, error) {
+		if !common.FileExists(BookmarkFile) {
+			return nil, 0, &common.ErrFileNotFound{
+				FileName: BookmarkFile,
+			}
 		}
 
-		_, err = sb.Write(ba)
+		size, err := common.FileSize(BookmarkFile)
 		if common.Error(err) {
-			return nil, err
+			return nil, 0, err
+		}
+
+		file, err := os.Open(BookmarkFile)
+		if common.Error(err) {
+			return nil, 0, err
 		}
 
 		w.Header().Set(common.CONTENT_TYPE, common.MimetypeApplicationJson.MimeType)
-		w.Header().Set(common.CONTENT_LENGTH, strconv.Itoa(sb.Len()))
+		w.Header().Set(common.CONTENT_LENGTH, strconv.Itoa(int(size)))
 
-		return sb, nil
+		return file, size, nil
 	}()
 
 	switch err {
 	case nil:
-		common.Error(common.HTTPResponse(w, r, http.StatusOK, common.MimetypeApplicationJson.MimeType, sb.Len(), sb))
+		defer func() {
+			common.Error(file.Close())
+		}()
+
+		common.Error(common.HTTPResponse(w, r, http.StatusOK, common.MimetypeApplicationJson.MimeType, int(size), file))
 	default:
 		http.Error(w, err.Error(), http.StatusBadRequest)
 	}
-}
-
-func BookmarkDate(v int64) time.Time {
-	return time.Unix(0, v*1000*int64(time.Microsecond))
 }
 
 func setBookmarkHandler(w http.ResponseWriter, r *http.Request) {
 	common.DebugFunc()
 
 	err := func() error {
-		ba, err := common.ReadBody(r.Body)
+		file, err := os.OpenFile(BookmarkFile, os.O_RDWR|os.O_CREATE|os.O_TRUNC, common.DefaultFileMode)
 		if common.Error(err) {
 			return err
 		}
 
-		fmt.Printf("%s\n", ba)
+		defer func() {
+			common.Error(file.Close())
+		}()
 
-		b := &Bookmarks{}
+		_, err = io.Copy(file, r.Body)
+		defer func() {
+			common.Error(r.Body.Close())
+		}()
 
-		err = json.Unmarshal(ba, b.Children)
 		if common.Error(err) {
 			return err
 		}
-
-		fmt.Printf("%v\n", BookmarkDate(b.DateAdded))
 
 		return nil
 	}()
