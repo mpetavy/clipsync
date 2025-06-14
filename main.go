@@ -63,27 +63,29 @@ func getBookmarkHandler(w http.ResponseWriter, r *http.Request) {
 func setBookmarkHandler(w http.ResponseWriter, r *http.Request) {
 	common.DebugFunc()
 
-	err := func() error {
-		file, err := os.OpenFile(BookmarkFile, os.O_RDWR|os.O_CREATE|os.O_TRUNC, common.DefaultFileMode)
-		if common.Error(err) {
-			return err
-		}
+	var err error
 
-		defer func() {
-			common.Error(file.Close())
-		}()
-
-		_, err = io.Copy(file, r.Body)
-		defer func() {
-			common.Error(r.Body.Close())
-		}()
-
-		if common.Error(err) {
-			return err
-		}
-
-		return nil
-	}()
+	//err := func() error {
+	//	file, err := os.OpenFile(BookmarkFile, os.O_RDWR|os.O_CREATE|os.O_TRUNC, common.DefaultFileMode)
+	//	if common.Error(err) {
+	//		return err
+	//	}
+	//
+	//	defer func() {
+	//		common.Error(file.Close())
+	//	}()
+	//
+	//	_, err = io.Copy(file, r.Body)
+	//	defer func() {
+	//		common.Error(r.Body.Close())
+	//	}()
+	//
+	//	if common.Error(err) {
+	//		return err
+	//	}
+	//
+	//	return nil
+	//}()
 
 	switch err {
 	case nil:

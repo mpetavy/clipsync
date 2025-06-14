@@ -45,21 +45,23 @@ async function getBookmarks() {
  * Replaces all current browser bookmarks with the provided list.
  * @param {Array} bookmarks - Array of bookmark objects (as returned by chrome.bookmarks.getTree)
  */
-async function replaceBookmarks(bookmarks) {
-    // Get the root bookmark folder (usually the "Bookmarks Bar" or similar)
-    const root = (await chrome.bookmarks.getTree())[0];
-
-    // Remove all children of the root (usually the Bookmarks Bar and Other Bookmarks)
-    // for (const child of root.children) {
-    //     await chrome.bookmarks.removeTree(child.id);
-    // }
-
-    // Add new bookmarks (assuming the input matches chrome.bookmarks.create format)
-    for (const bookmark of bookmarks) {
-        await chrome.bookmarks.create(bookmark);
+async function addBookmark(bookmark, parentId) {
+    const { children, id, folderType, syncing, dateGroupModified, dateAdded, ...createDetails } = bookmark;
+    if (parentId) createDetails.parentId = parentId;
+    const result = await chrome.bookmarks.create(createDetails);
+    if (children && children.length > 0 && !createDetails.url) {
+        for (const child of children) {
+            await addBookmark(child, result.id);
+        }
     }
 }
 
+async function replaceBookmarks(bookmarks) {
+    // Assuming 'bookmarks' is an array of root children (like the Bookmarks Bar and Other Bookmarks)
+    for (const bookmark of bookmarks) {
+        await addBookmark(bookmark);
+    }
+}
 
 // ##################################################################################################################
 
