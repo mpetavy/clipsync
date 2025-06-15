@@ -15,7 +15,7 @@ var resources embed.FS
 
 const (
 	//BookmarkFile = "bookmarks_3_24_25.html"
-	BookmarkFile = "bookmarks.html"
+	BookmarkFile = "bookmarks.json"
 )
 
 func init() {
@@ -64,7 +64,6 @@ func setBookmarkHandler(w http.ResponseWriter, r *http.Request) {
 	common.DebugFunc()
 
 	var err error
-
 	//err := func() error {
 	//	file, err := os.OpenFile(BookmarkFile, os.O_RDWR|os.O_CREATE|os.O_TRUNC, common.DefaultFileMode)
 	//	if common.Error(err) {

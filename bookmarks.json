@@ -1,0 +1,3313 @@
+[
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "dateAdded": 1741170864000,
+                "id": "1848",
+                "index": 0,
+                "parentId": "1847",
+                "syncing": false,
+                "title": "E-Mail – Petavy, Marcel – Outlook",
+                "url": "https://outlook.office.com/mail/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1849",
+                "index": 1,
+                "parentId": "1847",
+                "syncing": false,
+                "title": "Chat | Ramma, Deeksha | Microsoft Teams",
+                "url": "https://teams.microsoft.com/v2/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1850",
+                "index": 2,
+                "parentId": "1847",
+                "syncing": false,
+                "title": "ZEISS Citrix",
+                "url": "https://citrix.zeiss.org/WiSites/Zeiss/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1851",
+                "index": 3,
+                "parentId": "1847",
+                "syncing": false,
+                "title": "ZEISS CurioZ",
+                "url": "https://ecademy.zeiss.com/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1852",
+                "index": 4,
+                "parentId": "1847",
+                "syncing": false,
+                "title": "ZEISS HR4U",
+                "url": "https://wd3.myworkday.com/zeissgroup/login.htmld"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1853",
+                "index": 5,
+                "parentId": "1847",
+                "syncing": false,
+                "title": "ZEISS IT ServiceMgmt",
+                "url": "https://zeissprod.service-now.com/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1854",
+                "index": 6,
+                "parentId": "1847",
+                "syncing": false,
+                "title": "ZEISS IT4U",
+                "url": "https://zeissprod.service-now.com/it4u"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1855",
+                "index": 7,
+                "parentId": "1847",
+                "syncing": false,
+                "title": "ZEISS Intranet",
+                "url": "http://zeissnet.zeiss.org/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1856",
+                "index": 8,
+                "parentId": "1847",
+                "syncing": false,
+                "title": "ZEISS Outlook Web Access",
+                "url": "https://outlook.zeiss.com/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1857",
+                "index": 9,
+                "parentId": "1847",
+                "syncing": false,
+                "title": "ZEISS Sharepoint",
+                "url": "https://teamshare.zeiss.org/SitePages/Home.aspx"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1858",
+                "index": 10,
+                "parentId": "1847",
+                "syncing": false,
+                "title": "ZEISS Travel-Expenses",
+                "url": "https://www.concursolutions.com/UI/SSO/p00060299pkd"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1859",
+                "index": 11,
+                "parentId": "1847",
+                "syncing": false,
+                "title": "ZEISS Travelsecurity",
+                "url": "https://grd.exop-group.com/de/secure/home"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1860",
+                "index": 12,
+                "parentId": "1847",
+                "syncing": false,
+                "title": "ZEISS WIKI",
+                "url": "https://zeisswiki.zeiss.org/dashboard.action"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1861",
+                "index": 13,
+                "parentId": "1847",
+                "syncing": false,
+                "title": "ZEISS Yammer",
+                "url": "https://www.yammer.com/zeiss.com/"
+              }
+            ],
+            "dateAdded": 1749915282565,
+            "id": "1847",
+            "index": 0,
+            "parentId": "1",
+            "syncing": false,
+            "title": "#ZEISS#"
+          },
+          {
+            "dateAdded": 1741170864000,
+            "id": "1862",
+            "index": 1,
+            "parentId": "1",
+            "syncing": false,
+            "title": "Home",
+            "url": "https://zeiss.sharepoint.com/sites/EP/DE/Seiten/default.aspx"
+          },
+          {
+            "dateAdded": 1741170864000,
+            "id": "1863",
+            "index": 2,
+            "parentId": "1",
+            "syncing": false,
+            "title": "Google Docs",
+            "url": "https://docs.google.com/document/u/0/"
+          },
+          {
+            "dateAdded": 1741170864000,
+            "id": "1864",
+            "index": 3,
+            "parentId": "1",
+            "syncing": false,
+            "title": "Google Drive",
+            "url": "https://drive.google.com/drive/my-drive"
+          },
+          {
+            "children": [
+              {
+                "dateAdded": 1741170864000,
+                "id": "1866",
+                "index": 0,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "ZEISS NET Deutschland",
+                "url": "http://zeissnet.zeiss.org/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1867",
+                "index": 1,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Zeiss Projects",
+                "url": "http://trac-medmuc/trac"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1868",
+                "index": 2,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Zeiss VMWare",
+                "url": "https://demucsvcsa01.demuc01.zeiss.org/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1869",
+                "index": 3,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Zeiss Citrix",
+                "url": "https://citrix.zeiss.org/WiSites/Zeiss/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1870",
+                "index": 4,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Zeiss Mitarbeiterangebote",
+                "url": "https://zeiss.mitarbeiterangebote.de/login"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1871",
+                "index": 5,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Zeiss Outlook Web App",
+                "url": "https://outlook.office.com/owa/zeiss.com"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1872",
+                "index": 6,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Zeiss Subversion",
+                "url": "http://svn-medmuc/organisation/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1873",
+                "index": 7,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Zeiss Quap LEHEL",
+                "url": "http://quap-medmuc/cgi-bin/testDocStart?WunschSeite=myQuAP&project=lehel"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1874",
+                "index": 8,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Zeiss eCademy",
+                "url": "https://academy.zeiss.com/pages/internal-dashboard.jsf?faces-redirect=true&dashboardId=180804"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1875",
+                "index": 9,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Zeiss DE-MED-MUC - Welcome",
+                "url": "https://teamshare.zeiss.org/minimal/06428/SitePages/Welcome.aspx"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1876",
+                "index": 10,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "ZEISS NET Deutschland - Konzernfunktion Personal",
+                "url": "http://zeissnet.zeiss.org/onboarding_de"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1877",
+                "index": 11,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Zeiss Meine Assets",
+                "url": "https://teamshare.zeiss.org/team/05199/1600926/SitePages/Homepage.aspx"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1878",
+                "index": 12,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "EclipseIDEConfiguration – Trac - Lehel",
+                "url": "http://trac-medmuc/trac/lehel/wiki/EclipseIDEConfiguration"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1879",
+                "index": 13,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Neueinsteiger – Trac - Lehel",
+                "url": "http://trac-medmuc/trac/lehel/wiki/Neueinsteiger"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1880",
+                "index": 14,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Trac - Lehel",
+                "url": "http://trac-medmuc/trac/lehel/wiki/WikiStart"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1881",
+                "index": 15,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "ConCur Startseite",
+                "url": "https://eur01.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.concursolutions.com%2FUI%2FSSO%2Fp00060299pkd&data=05%7C01%7C%7C11767e25cf59461c65af08dbd14f01d9%7C28042244bb514cd680347776fa3703e8%7C0%7C0%7C638333911302102131%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&sdata=6X%2BeDunHwtTUNKJbxW%2F54hQ5G0mOBhmyoUB9Pgc%2F16A%3D&reserved=0"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1882",
+                "index": 16,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "ZEISS Travel SharePoint - Rund ums Reisen",
+                "url": "https://www.concursolutions.com/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1883",
+                "index": 17,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Urlaub - Dashboard",
+                "url": "https://teamshare.zeiss.org/minimal/06428/1600933/SitePages/Dashboard.aspx"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1884",
+                "index": 18,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Zeiss VMware vSphere",
+                "url": "https://vcenter-medmuc/ui"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1885",
+                "index": 19,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Index of forum-release-local/de/zeiss/forum/ForumServerInstallationMedium",
+                "url": "http://artifactory-medmuc:8084/artifactory/forum-release-local/de/zeiss/forum/ForumServerInstallationMedium/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1886",
+                "index": 20,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "ZEISS Travel SharePoint - Rund ums Reisen",
+                "url": "https://teamshare.zeiss.org/minimal/06159/SitePages/Rund%20ums%20Reisen.aspx"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1887",
+                "index": 21,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "ZEISS NET Deutschland",
+                "url": "http://zeissnet.zeiss.org/C1256C0E0049D26C/Contents-Frame/F67F865A6B5167ACC1256C2800360089"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1888",
+                "index": 22,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Petavy, Marcel - Outlook Web App",
+                "url": "http://outlook.com/owa/zeiss.com/marcel.petavy@zeiss.mail.onmicrosoft.com"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1889",
+                "index": 23,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Service Portal - ZEISS - IT4U",
+                "url": "https://zeissprod.service-now.com/it4u"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1890",
+                "index": 24,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Oops - an error has occurred - ZEISS Wiki",
+                "url": "https://zeisswiki.zeiss.org/display/CIT/Hightail+File+Exchange+solution"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1891",
+                "index": 25,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "My DMS - Home",
+                "url": "https://dms-med.zeiss.org/SitePages/Home.aspx"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1892",
+                "index": 26,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "org.manager",
+                "url": "http://orgmanager.zeiss.org/orgmanager/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1893",
+                "index": 27,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Stundenliste - Alle Dokumente",
+                "url": "https://teamshare.zeiss.org/minimal/06428/Stundenliste/Forms/AllItems.aspx"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1894",
+                "index": 28,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Anleitung_Stundenbuchprozess ab Februar 2022.docx",
+                "url": "https://teamshare.zeiss.org/minimal/06428/_layouts/15/WopiFrame.aspx?sourcedoc={36A02870-F1A4-47F4-B9A7-D8B87226FD65}&file=Anleitung_Stundenbuchprozess%20ab%20Februar%202022.docx&action=default"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1895",
+                "index": 29,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "mfasetup",
+                "url": "https://aka.ms/mfasetup"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1896",
+                "index": 30,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "My Account",
+                "url": "https://myaccount.microsoft.com/?ref=MeControl"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1897",
+                "index": 31,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "ZEISS Schwerbehindertenvertretung",
+                "url": "https://zeiss.sharepoint.com/sites/EP_LS/KSGI_Schwerbehindertenvertretung/Pages/groupsofinterestshome.aspx"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1898",
+                "index": 32,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "MED Munich Renovation - Meetingrooms_fromJuly31st.pdf - Alle Dokumente",
+                "url": "https://zeiss.sharepoint.com/sites/msteams_b38dd7/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fmsteams_b38dd7%2FShared%20Documents%2FGeneral%2FMeetingrooms_fromJuly31st%2Epdf&parent=%2Fsites%2Fmsteams_b38dd7%2FShared%20Documents%2FGeneral"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1899",
+                "index": 33,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Enterprise Skills Initiative",
+                "url": "https://esi.microsoft.com/Search?q=az-204"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1900",
+                "index": 34,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Swagger UI",
+                "url": "https://ew1.veracitydoc.com/api/emr-integration/api-docs/#/Patient%20Demographic%20Data/post_v1_sendPatient"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1901",
+                "index": 35,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Servicekatalog - ZEISS - IT4U",
+                "url": "https://zeissprod.service-now.com/it4u?id=cz_sc_cat_item&sys_id=3bf1b7ed1b635c94cd8920a36b4bcb42&cat_id=8779bb0ddb7c7700299e14a05b9619f0"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1902",
+                "index": 36,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Software Download Portal",
+                "url": "https://sdp-meditec.zeiss.com/Home/33d2e98b-0210-ec3e-a644-ead3431fbfff"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1903",
+                "index": 37,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "14. FORUM Releases - FORUM Family - ZEISS Wiki",
+                "url": "https://wiki.zeiss.com/display/forumfamily/14.+FORUM+Releases"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1904",
+                "index": 38,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Public Repositories - ZEISS Bitbucket",
+                "url": "https://bitbucket.zeiss.com/repos?visibility=public"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1905",
+                "index": 39,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "2024-01-26 Architecture Sync on Kogent Integration - Cranial Tumor Workflow - ZEISS Wiki",
+                "url": "https://wiki.zeiss.com/pages/viewpage.action?spaceKey=CTWF&title=2024-01-26+Architecture+Sync+on+Kogent+Integration"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1907",
+                    "index": 0,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "streamsigner-docker — TeamCity",
+                    "url": "http://tc-medmuc:8083/buildConfiguration/CONF_StreamSigner_StreamsignerDocker"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1908",
+                    "index": 1,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "JFrog",
+                    "url": "http://artifactory-medmuc.zeiss.org:8084/ui/artifactSearchResults?name=streamsigner&type=artifacts"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1909",
+                    "index": 2,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "[DMDS-18315] Validation: StreamSigner - jira-medmuc",
+                    "url": "https://jira-medmuc.zeiss.org/browse/DMDS-18315"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1910",
+                    "index": 3,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "Best GUI frameworks for Go - LogRocket Blog",
+                    "url": "https://blog.logrocket.com/best-gui-frameworks-go/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1911",
+                    "index": 4,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "Tabellenverzeichnis in Word erstellen ~ Die Schritte",
+                    "url": "https://www.bachelorprint.de/aufbau-gliederung/tabellenverzeichnis/tabellenverzeichnis-word/#:~:text=Du%20f%C3%BCgst%20ein%20Tabellenverzeichnis%20in,die%20Option%20%E2%80%9ETabelle%E2%80%9C%20aus."
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1912",
+                    "index": 5,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "AsciiDoc: Wenn Markdown an die Grenzen kommt | dirkkoller.de",
+                    "url": "https://www.dirkkoller.de/asciidoc"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1913",
+                    "index": 6,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "streamsigner-medmuc.zeiss.org:8443",
+                    "url": "https://streamsigner-medmuc.zeiss.org:8443/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1914",
+                    "index": 7,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "User Profile: Petavy, Marcel - jira-medmuc",
+                    "url": "https://jira-medmuc.zeiss.org/secure/ViewProfile.jspa?name=OGMPETAV"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1915",
+                    "index": 8,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "KINEVO 900 + 900 S (Oberhausen) - Cranial Tumor Workflow - ZEISS Wiki",
+                    "url": "https://wiki.zeiss.com/pages/viewpage.action?pageId=598839724"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1916",
+                    "index": 9,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "2024-01-26 Architecture Sync on Kogent Integration - Cranial Tumor Workflow - ZEISS Wiki",
+                    "url": "https://wiki.zeiss.com/pages/viewpage.action?spaceKey=CTWF&title=2024-01-26+Architecture+Sync+on+Kogent+Integration"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1917",
+                    "index": 10,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "Sign in to your account",
+                    "url": "https://login.microsoftonline.com/common/oauth2/logoutredirect"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1918",
+                    "index": 11,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "Gio UI",
+                    "url": "https://gioui.org/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1919",
+                    "index": 12,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "ARLT Gaming PC / AMD Ryzen 7 5700X / 16GB / 1TB M.2 SSD / RTX4070 Super / Win 11 Pro | ARLT Computer",
+                    "url": "https://www.arlt.com/index.php?cl=details&anid=3091162&force_admin_sid=vejo1h60iuvl5egt2mdr9ekv8g&stoken=470D13D&shp=1&preview=601be77eaf64eede30ecbb0ddb643c01&force_sid=g030rv10884gqkp53b7n0ji52t"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1920",
+                    "index": 13,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "Google News",
+                    "url": "https://news.google.com/home?hl=de&gl=DE&ceid=DE:de"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1921",
+                    "index": 14,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "Mastering Error Handling in Go 🚀 | by Nouhoum TRAORE | Medium",
+                    "url": "https://medium.com/@nouhoum/mastering-error-handling-in-go-0239f229c6c8"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1922",
+                    "index": 15,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "fmt.Errorf() or errors.New()? : r/golang",
+                    "url": "https://www.reddit.com/r/golang/comments/6ffrie/fmterrorf_or_errorsnew/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1923",
+                    "index": 16,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "Gocon Spring 2016",
+                    "url": "https://dave.cheney.net/paste/gocon-spring-2016.pdf"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1924",
+                    "index": 17,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "Effective Error Handling in Golang - Earthly Blog",
+                    "url": "https://earthly.dev/blog/golang-errors/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1925",
+                    "index": 18,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "Logging in Go with Slog: The Ultimate Guide | Better Stack Community",
+                    "url": "https://betterstack.com/community/guides/logging/logging-in-go/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1926",
+                    "index": 19,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "Verbinden von USB-Geräten | Microsoft Learn",
+                    "url": "https://learn.microsoft.com/de-de/windows/wsl/connect-usb"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1927",
+                    "index": 20,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "7-Tage-News | heise online",
+                    "url": "https://www.heise.de/newsticker/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1928",
+                    "index": 21,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "Enterprise Skills Initiative: Welcome",
+                    "url": "https://esi.microsoft.com/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1929",
+                    "index": 22,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "Releases - Repos",
+                    "url": "https://dev.azure.com/ZEISSgroup-MED/JEN_VISUCONNECT/_git/Releases"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1930",
+                    "index": 23,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "BIOS Update for Windows 11 (64-bit) - IdeaPad Pro 5 16APH8 - Lenovo Support DE",
+                    "url": "https://pcsupport.lenovo.com/de/de/products/laptops-and-netbooks/5-series/ideapad-pro-5-16aph8/83ar/83ar0028ge/pf4dmpnr/downloads/ds564095-bios-update-for-windows-10-64-bit-and-windows-11-64-bit-ideapad-pro-5-16aph8?Products=LAPTOPS-AND-NETBOOKS%2F5-SERIES%2FIDEAPAD-PRO-5-16APH8%2F83AR%2F83AR0028GE%2FPF4DMPNR"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1931",
+                    "index": 24,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "streamsigner-medmuc.zeiss.org:8443",
+                    "url": "https://streamsigner-medmuc.zeiss.org:8443/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1932",
+                    "index": 25,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "Project Ongoing validations - Home",
+                    "url": "https://dms-med.zeiss.org/product/35/2/SitePages/Home.aspx"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1933",
+                    "index": 26,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "Review status",
+                    "url": "https://dms-med.zeiss.org/product/35/2/_layouts/15/CZ.Med.Dms.Customizations/ReviewStatus.aspx?ReviewID=Review_0000166824-01_1&DocumentID=0000166824-01"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1934",
+                    "index": 27,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "Project Ongoing validations - Home",
+                    "url": "https://dms-med.zeiss.org/product/35/2/SitePages/Home.aspx"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1935",
+                    "index": 28,
+                    "parentId": "1906",
+                    "syncing": false,
+                    "title": "DeepL Translate: The world's most accurate translator",
+                    "url": "https://www.deepl.com/translator#en/de/overdue%0A"
+                  }
+                ],
+                "dateAdded": 1749915282569,
+                "id": "1906",
+                "index": 40,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Neuer Ordner"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1936",
+                "index": 41,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Your work - ZEISS Bitbucket",
+                "url": "https://bitbucket.zeiss.com/dashboard"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1937",
+                "index": 42,
+                "parentId": "1865",
+                "syncing": false,
+                "title": "Mein Profil",
+                "url": "https://www2.twisp.towerswatson.com/portal/group/cz/account"
+              }
+            ],
+            "dateAdded": 1749915282567,
+            "id": "1865",
+            "index": 4,
+            "parentId": "1",
+            "syncing": false,
+            "title": "Zeiss Intern"
+          },
+          {
+            "children": [
+              {
+                "dateAdded": 1741170864000,
+                "id": "1939",
+                "index": 0,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Artifactory",
+                "url": "http://artifactory-medmuc:8084/artifactory/webapp/#/home"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1940",
+                "index": 1,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Maven Repository: Search/Browse/Explore",
+                "url": "https://mvnrepository.com/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1941",
+                "index": 2,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Maven – POM Reference",
+                "url": "https://maven.apache.org/pom.html"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1942",
+                "index": 3,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Projects · Dashboard · GitLab",
+                "url": "http://gitlab-medmuc/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1943",
+                "index": 4,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Liermann Books",
+                "url": "http://books.liermann.biz/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1944",
+                "index": 5,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "TRAC: Changeset",
+                "url": "http://trac-medmuc/trac/lehel/changeset/140171"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1945",
+                "index": 6,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "TRAC: Ticket",
+                "url": "http://trac-medmuc/trac/lehel/ticket/6663"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1946",
+                "index": 7,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "vSphere Client",
+                "url": "https://vcenter-medmuc/ui/#?extensionId=vsphere.core.host.relatedVMs&objectId=urn:vmomi:HostSystem:host-227:83a9401d-430a-4a26-96f1-858da58b6176&navigator=vsphere.core.viTree.hostsAndClustersView"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1947",
+                "index": 8,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Zeiss Quap SBOX",
+                "url": "http://quap-medmuc/cgi-bin/testDocStart?WunschSeite=myQuAP&project=sbox"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1948",
+                "index": 9,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "CZMS JIRA - FORUM Team mit FixVersions",
+                "url": "https://jira-medmuc.zeiss.org/secure/RapidBoard.jspa?rapidView=96"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1949",
+                "index": 10,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Log in to TeamCity — TeamCity",
+                "url": "http://tc8-medmuc:83/login.html"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1950",
+                "index": 11,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Glassfish",
+                "url": "http://localhost:4848/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1951",
+                "index": 12,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Effective Handling of Big Images in Java",
+                "url": "http://worksheetsoftware.com/index.php/software/blog/29-effective-handling-of-big-images-in-java"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1952",
+                "index": 13,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Onenote Backend Umbau",
+                "url": "https://zeiss-my.sharepoint.com/:o:/r/personal/mscmey_zeiss_com/Documents/Backend%20Neu?d=w96ca76e4a53b4e33ae1e562a425d23ba&csf=1&e=uJokr9"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1953",
+                "index": 14,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Sample HL7 Messages - MIE Website Wiki",
+                "url": "https://www.mieweb.com/wiki/Sample_HL7_Messages#ADT.5EA04"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1954",
+                "index": 15,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "SOP Instance UID Attribute – DICOM Standard Browser",
+                "url": "https://dicom.innolitics.com/ciods/rt-plan/sop-common/00080018"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1955",
+                "index": 16,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "DICOM Library - Anonymize, Share, View DICOM files ONLINE",
+                "url": "https://www.dicomlibrary.com/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1956",
+                "index": 17,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "[FOPBL-156] HL7, DICOM Interface, Interoperability - jira-medmuc",
+                "url": "https://jira-medmuc.zeiss.org/browse/FOPBL-156"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "1957",
+                "index": 18,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Skillpipe",
+                "url": "https://skillpipe.com/?lang=de-DE"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1959",
+                    "index": 0,
+                    "parentId": "1958",
+                    "syncing": false,
+                    "title": "Com Port Redirector | Lantronix",
+                    "url": "https://www.lantronix.com/products/com-port-redirector/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1960",
+                    "index": 1,
+                    "parentId": "1958",
+                    "syncing": false,
+                    "title": "Serial port to network proxy - Browse Files at SourceForge.net",
+                    "url": "https://sourceforge.net/projects/ser2net/files/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1961",
+                    "index": 2,
+                    "parentId": "1958",
+                    "syncing": false,
+                    "title": "serial data over ethernet on a linux box - Unix & Linux Stack Exchange",
+                    "url": "https://unix.stackexchange.com/questions/100845/serial-data-over-ethernet-on-a-linux-box"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1962",
+                    "index": 3,
+                    "parentId": "1958",
+                    "syncing": false,
+                    "title": "tty - Comunicate with remote Serial over TCP/IP as /dev/ttyX device - Unix & Linux Stack Exchange",
+                    "url": "https://unix.stackexchange.com/questions/127784/comunicate-with-remote-serial-over-tcp-ip-as-dev-ttyx-device"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1963",
+                    "index": 4,
+                    "parentId": "1958",
+                    "syncing": false,
+                    "title": "netcat - create a UDP to serial bridge with socat - Unix & Linux Stack Exchange",
+                    "url": "https://unix.stackexchange.com/questions/453974/create-a-udp-to-serial-bridge-with-socat"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1964",
+                    "index": 5,
+                    "parentId": "1958",
+                    "syncing": false,
+                    "title": "linux - Create a virtual serial port connection over TCP - Stack Overflow",
+                    "url": "https://stackoverflow.com/questions/22624653/create-a-virtual-serial-port-connection-over-tcp"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1965",
+                    "index": 6,
+                    "parentId": "1958",
+                    "syncing": false,
+                    "title": "Converting serial port data to TCP/IP in a Linux environment - Stack Overflow",
+                    "url": "https://stackoverflow.com/questions/484740/converting-serial-port-data-to-tcp-ip-in-a-linux-environment"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1966",
+                    "index": 7,
+                    "parentId": "1958",
+                    "syncing": false,
+                    "title": "Ethernet + Serial port in Linux - Stack Overflow",
+                    "url": "https://stackoverflow.com/questions/12064735/ethernet-serial-port-in-linux"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1967",
+                    "index": 8,
+                    "parentId": "1958",
+                    "syncing": false,
+                    "title": "Redirect serial com to tcp port - Super User",
+                    "url": "https://superuser.com/questions/614494/redirect-serial-com-to-tcp-port"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1968",
+                    "index": 9,
+                    "parentId": "1958",
+                    "syncing": false,
+                    "title": "AM3352 Sitara Processor: Arm Cortex-A8, 1Gb Ethernet, display, CAN | TI.com",
+                    "url": "http://www.ti.com/product/AM3352"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1969",
+                    "index": 10,
+                    "parentId": "1958",
+                    "syncing": false,
+                    "title": "Go (Golang) GOOS and GOARCH",
+                    "url": "https://gist.github.com/asukakenji/f15ba7e588ac42795f421b48b8aede63"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1970",
+                    "index": 11,
+                    "parentId": "1958",
+                    "syncing": false,
+                    "title": "TLS server and client",
+                    "url": "https://gist.github.com/spikebike/2232102"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1971",
+                    "index": 12,
+                    "parentId": "1958",
+                    "syncing": false,
+                    "title": "akamensky/golang-upgrade-tcp-to-tls: An example code how to upgrade TCP connection to TLS in Go",
+                    "url": "https://github.com/akamensky/golang-upgrade-tcp-to-tls"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1972",
+                    "index": 13,
+                    "parentId": "1958",
+                    "syncing": false,
+                    "title": "From TCP to TLS in Go - Pascal's Blog",
+                    "url": "http://pascal.bach.ch/2015/12/17/from-tcp-to-tls-in-go/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1973",
+                    "index": 14,
+                    "parentId": "1958",
+                    "syncing": false,
+                    "title": "TLS | Network Programming with Go (golang)",
+                    "url": "https://ipfs.io/ipfs/QmfYeDhGH9bZzihBUDEQbCbTc5k5FZKURMUoUvfmc27BwL/security/tls.html"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1974",
+                    "index": 15,
+                    "parentId": "1958",
+                    "syncing": false,
+                    "title": "How to dial remote SSL/TLS services in Go | Dave Cheney",
+                    "url": "https://dave.cheney.net/2010/10/05/how-to-dial-remote-ssltls-services-in-go"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1975",
+                    "index": 16,
+                    "parentId": "1958",
+                    "syncing": false,
+                    "title": "HTTPS for free in Go, with little help of Let's Encrypt",
+                    "url": "https://blog.kowalczyk.info/article/Jl3G/https-for-free-in-go-with-little-help-of-lets-encrypt.html"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1976",
+                    "index": 17,
+                    "parentId": "1958",
+                    "syncing": false,
+                    "title": "Write log to file (or /dev/null) · YourBasic Go",
+                    "url": "https://yourbasic.org/golang/log-to-file/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1977",
+                    "index": 18,
+                    "parentId": "1958",
+                    "syncing": false,
+                    "title": "COM-Port Manager - ComPortMan",
+                    "url": "https://www.uwe-sieber.de/comportman.html"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1978",
+                    "index": 19,
+                    "parentId": "1958",
+                    "syncing": false,
+                    "title": "COM-Ports Win 10: Alle Probleme auf zwei einfache Arten beheben",
+                    "url": "https://www.virtual-serial-port.org/de/articles/com-port-on-windows-10/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1979",
+                    "index": 20,
+                    "parentId": "1958",
+                    "syncing": false,
+                    "title": "jsonschema2pojo",
+                    "url": "http://www.jsonschema2pojo.org/"
+                  }
+                ],
+                "dateAdded": 1749915282571,
+                "id": "1958",
+                "index": 19,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Hadern"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1981",
+                    "index": 0,
+                    "parentId": "1980",
+                    "syncing": false,
+                    "title": "Kästle HYDRA-0.8.3",
+                    "url": "http://10.5.122.103:8090/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1982",
+                    "index": 1,
+                    "parentId": "1980",
+                    "syncing": false,
+                    "title": "Raspi HYDRA-0.8.3",
+                    "url": "http://10.5.122.169:8090/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1983",
+                    "index": 2,
+                    "parentId": "1980",
+                    "syncing": false,
+                    "title": "PicoCore™MX6SX » F&S Elektronik Systeme GmbH",
+                    "url": "https://www.fs-net.de/de/produkte/picocore/picocoremx6sx-mit-nxp-i-mx6solox-prozessor/"
+                  }
+                ],
+                "dateAdded": 1749915282572,
+                "id": "1980",
+                "index": 20,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Hydra"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1985",
+                    "index": 0,
+                    "parentId": "1984",
+                    "syncing": false,
+                    "title": "EMR Interfaces",
+                    "url": "http://quap-medmuc/cgi-bin/testDocStart?WunschSeite=AnforderungsListe&Produkt_ID=1&Thema_IDListe=69&user_ID=0&project=lehel&AtemHolen=1"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1986",
+                    "index": 1,
+                    "parentId": "1984",
+                    "syncing": false,
+                    "title": "Interfaces",
+                    "url": "http://quap-medmuc/cgi-bin/testDocStart?WunschSeite=AnforderungsListe&Produkt_ID=1&Thema_IDListe=4&user_ID=0&project=lehel&AtemHolen=1"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1987",
+                    "index": 2,
+                    "parentId": "1984",
+                    "syncing": false,
+                    "title": "HL7 Interface",
+                    "url": "http://quap-medmuc/cgi-bin/testDocStart?WunschSeite=AnforderungsListe&Produkt_ID=1&Thema_IDListe=95&user_ID=0&project=lehel&AtemHolen=1"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1988",
+                    "index": 3,
+                    "parentId": "1984",
+                    "syncing": false,
+                    "title": "2.330.20.0 Lehel Archive - [HL7_inbound_message_logging]",
+                    "url": "http://quap-medmuc/cgi-bin/testDocStart?WunschSeite=Anforderung&KoHiMiLo_ID=2.330.20.0&project=lehel"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1989",
+                    "index": 4,
+                    "parentId": "1984",
+                    "syncing": false,
+                    "title": "Gazelle",
+                    "url": "https://gazelle.ihe.net/EU-CAT/home.seam?cid=127748"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1990",
+                    "index": 5,
+                    "parentId": "1984",
+                    "syncing": false,
+                    "title": "DICOM Standard",
+                    "url": "http://www.dicomstandard.org/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1991",
+                    "index": 6,
+                    "parentId": "1984",
+                    "syncing": false,
+                    "title": "www.ihe.net",
+                    "url": "http://www.ihe.net/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1992",
+                    "index": 7,
+                    "parentId": "1984",
+                    "syncing": false,
+                    "title": "https://www.ihe.net/Eye_Care/",
+                    "url": "https://www.ihe.net/Eye_Care/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1993",
+                    "index": 8,
+                    "parentId": "1984",
+                    "syncing": false,
+                    "title": "www.ihe.net/Technical_Frameworks/#eyecare",
+                    "url": "http://www.ihe.net/Technical_Frameworks/#eyecare"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1994",
+                    "index": 9,
+                    "parentId": "1984",
+                    "syncing": false,
+                    "title": "www.ihe.net/Technical_Frameworks/",
+                    "url": "http://www.ihe.net/Technical_Frameworks/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1995",
+                    "index": 10,
+                    "parentId": "1984",
+                    "syncing": false,
+                    "title": "ADT A01 - Admit/visit notification (HL7 v2.3)",
+                    "url": "http://hl7-definition.caristix.com:9010/HL7%20v2.3/triggerEvent/Default.aspx?version=HL7+v2.3&triggerEvent=ADT_A06"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1996",
+                    "index": 11,
+                    "parentId": "1984",
+                    "syncing": false,
+                    "title": "HL7 Definition - Caristix",
+                    "url": "http://hl7-definition.caristix.com:9010/HL7%20v2.4/triggerEvent/Default.aspx?version=HL7+v2.4&triggerEvent=ADT_A06"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1997",
+                    "index": 12,
+                    "parentId": "1984",
+                    "syncing": false,
+                    "title": "Eye Care Workflow - IHE Wiki",
+                    "url": "http://wiki.ihe.net/index.php/Eye_Care_Workflow"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1998",
+                    "index": 13,
+                    "parentId": "1984",
+                    "syncing": false,
+                    "title": "Integration & Health information exchange - Agile Board - CZMS JIRA",
+                    "url": "http://jira-medmuc.zeiss.org:8080/secure/RapidBoard.jspa?rapidView=15&view=planning&selectedIssue=HLB-219"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "1999",
+                    "index": 14,
+                    "parentId": "1984",
+                    "syncing": false,
+                    "title": "IHE DE Cookbook – Hl7wiki",
+                    "url": "http://wiki.hl7.de/index.php?title=IHE_DE_Cookbook"
+                  }
+                ],
+                "dateAdded": 1749915282572,
+                "id": "1984",
+                "index": 21,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "HL7/IHE"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2001",
+                    "index": 0,
+                    "parentId": "2000",
+                    "syncing": false,
+                    "title": "workspace :: Git Cheatsheet",
+                    "url": "http://www.ndpsoftware.com/git-cheatsheet.html#loc=workspace;"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2002",
+                    "index": 1,
+                    "parentId": "2000",
+                    "syncing": false,
+                    "title": "Git Cheat Sheet",
+                    "url": "https://www.git-tower.com/blog/git-cheat-sheet/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2003",
+                    "index": 2,
+                    "parentId": "2000",
+                    "syncing": false,
+                    "title": "Roshanjossey/first-contributions: 🚀 Yet another project to get beginners contributing to open source 🔰",
+                    "url": "https://github.com/Roshanjossey/first-contributions"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2004",
+                    "index": 3,
+                    "parentId": "2000",
+                    "syncing": false,
+                    "title": "Cap'n Proto: Introduction",
+                    "url": "https://capnproto.org/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2005",
+                    "index": 4,
+                    "parentId": "2000",
+                    "syncing": false,
+                    "title": "Adding an existing project to GitHub using the command line - User Documentation",
+                    "url": "https://help.github.com/articles/adding-an-existing-project-to-github-using-the-command-line/"
+                  }
+                ],
+                "dateAdded": 1749915282572,
+                "id": "2000",
+                "index": 22,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "GIT"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2007",
+                    "index": 0,
+                    "parentId": "2006",
+                    "syncing": false,
+                    "title": "Cntlm: Fast NTLM Authentication Proxy in C",
+                    "url": "http://cntlm.sourceforge.net/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2008",
+                    "index": 1,
+                    "parentId": "2006",
+                    "syncing": false,
+                    "title": "ubuntu proxyserver with credentials at DuckDuckGo",
+                    "url": "https://duckduckgo.com/?q=ubuntu+proxyserver+with+credentials&atb=v123-1__&ia=qa"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2009",
+                    "index": 2,
+                    "parentId": "2006",
+                    "syncing": false,
+                    "title": "Maven Repository: Search/Browse/Explore",
+                    "url": "https://www.mvnrepository.com/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2010",
+                    "index": 3,
+                    "parentId": "2006",
+                    "syncing": false,
+                    "title": "Fragmenta – A Golang CMS",
+                    "url": "https://fragmenta.eu/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2011",
+                    "index": 4,
+                    "parentId": "2006",
+                    "syncing": false,
+                    "title": "rclone - rsync for cloud storage",
+                    "url": "https://rclone.org/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2012",
+                    "index": 5,
+                    "parentId": "2006",
+                    "syncing": false,
+                    "title": "windows - How to make SUBST mapping persistent across reboots? - Super User",
+                    "url": "https://superuser.com/questions/29072/how-to-make-subst-mapping-persistent-across-reboots"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2013",
+                    "index": 6,
+                    "parentId": "2006",
+                    "syncing": false,
+                    "title": "Java Annotation Processing and Creating a Builder | Baeldung",
+                    "url": "https://www.baeldung.com/java-annotation-processing-builder"
+                  }
+                ],
+                "dateAdded": 1749915282573,
+                "id": "2006",
+                "index": 23,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Tools"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2015",
+                    "index": 0,
+                    "parentId": "2014",
+                    "syncing": false,
+                    "title": "Jasypt: Java simplified encryption - Easy usage: the utils",
+                    "url": "http://www.jasypt.org/easy-usage.html"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2016",
+                    "index": 1,
+                    "parentId": "2014",
+                    "syncing": false,
+                    "title": "Encrypting Properties With Jasypt - Jayway",
+                    "url": "https://blog.jayway.com/2008/12/09/encrypting-properties-with-jasypt/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2017",
+                    "index": 2,
+                    "parentId": "2014",
+                    "syncing": false,
+                    "title": "HOWTO Use Jasypt to encrypt passwords in configuration files - CAS User Manual - Apereo Wiki",
+                    "url": "https://wiki.jasig.org/display/CASUM/HOWTO+Use+Jasypt+to+encrypt+passwords+in+configuration+files"
+                  }
+                ],
+                "dateAdded": 1749915282573,
+                "id": "2014",
+                "index": 24,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Encryption"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2019",
+                    "index": 0,
+                    "parentId": "2018",
+                    "syncing": false,
+                    "title": "Spring Boot Reference Guide",
+                    "url": "https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2020",
+                    "index": 1,
+                    "parentId": "2018",
+                    "syncing": false,
+                    "title": "Appendix A. Common application properties",
+                    "url": "https://docs.spring.io/spring-boot/docs/current/reference/html/common-application-properties.html"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2021",
+                    "index": 2,
+                    "parentId": "2018",
+                    "syncing": false,
+                    "title": "Using Logback with Spring Boot - Spring Framework Guru",
+                    "url": "https://springframework.guru/using-logback-spring-boot/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2022",
+                    "index": 3,
+                    "parentId": "2018",
+                    "syncing": false,
+                    "title": "Solving Your Logging Problems with Logback",
+                    "url": "https://stackify.com/logging-logback/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2023",
+                    "index": 4,
+                    "parentId": "2018",
+                    "syncing": false,
+                    "title": "Better application events in Spring Framework 4.2",
+                    "url": "https://spring.io/blog/2015/02/11/better-application-events-in-spring-framework-4-2"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2024",
+                    "index": 5,
+                    "parentId": "2018",
+                    "syncing": false,
+                    "title": "Spring ApplicationEvent Example",
+                    "url": "http://www.javarticles.com/2015/05/spring-applicationevent-example.html"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2025",
+                    "index": 6,
+                    "parentId": "2018",
+                    "syncing": false,
+                    "title": "Guides",
+                    "url": "https://spring.io/guides"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2026",
+                    "index": 7,
+                    "parentId": "2018",
+                    "syncing": false,
+                    "title": "Auditing with JPA, Hibernate, and Spring Data JPA | Baeldung",
+                    "url": "http://www.baeldung.com/database-auditing-jpa"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2027",
+                    "index": 8,
+                    "parentId": "2018",
+                    "syncing": false,
+                    "title": "Spring 2.x: MVC Web Framework",
+                    "url": "http://www.torsten-horn.de/techdocs/jee-spring-mvc.htm"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2028",
+                    "index": 9,
+                    "parentId": "2018",
+                    "syncing": false,
+                    "title": "Understanding Spring Web Application Architecture: The Classic Way",
+                    "url": "https://www.petrikainulainen.net/software-development/design/understanding-spring-web-application-architecture-the-classic-way/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2029",
+                    "index": 10,
+                    "parentId": "2018",
+                    "syncing": false,
+                    "title": "Microservices with Spring",
+                    "url": "https://spring.io/blog/2015/07/14/microservices-with-spring"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2030",
+                    "index": 11,
+                    "parentId": "2018",
+                    "syncing": false,
+                    "title": "Unit tests with Mockito - Tutorial",
+                    "url": "https://www.vogella.com/tutorials/Mockito/article.html"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2031",
+                    "index": 12,
+                    "parentId": "2018",
+                    "syncing": false,
+                    "title": "How to run unit test with Maven - Mkyong.com",
+                    "url": "https://mkyong.com/maven/how-to-run-unit-test-with-maven/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2032",
+                    "index": 13,
+                    "parentId": "2018",
+                    "syncing": false,
+                    "title": "Let’s Turn Integration Tests with Maven to a First-Class Citizen – Antonio's Blog",
+                    "url": "https://antoniogoncalves.org/2012/12/13/lets-turn-integration-tests-with-maven-to-a-first-class-citizen/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2033",
+                    "index": 14,
+                    "parentId": "2018",
+                    "syncing": false,
+                    "title": "spring - Dynamically add jars to SpringBoot at runtime - Stack Overflow",
+                    "url": "https://stackoverflow.com/questions/41148353/dynamically-add-jars-to-springboot-at-runtime"
+                  }
+                ],
+                "dateAdded": 1749915282573,
+                "id": "2018",
+                "index": 25,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Spring Boot"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2035",
+                    "index": 0,
+                    "parentId": "2034",
+                    "syncing": false,
+                    "title": "Rhino Migration Guide - Rhino Migration Guide - OpenJDK Wiki",
+                    "url": "https://wiki.openjdk.java.net/display/Nashorn/Rhino+Migration+Guide"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2036",
+                    "index": 1,
+                    "parentId": "2034",
+                    "syncing": false,
+                    "title": "Java 8 Nashorn Tutorial",
+                    "url": "https://winterbe.com/posts/2014/04/05/java8-nashorn-tutorial/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2037",
+                    "index": 2,
+                    "parentId": "2034",
+                    "syncing": false,
+                    "title": "Java 8 Nashorn tutorial - Programmer Sought",
+                    "url": "https://www.programmersought.com/article/3145974277/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2038",
+                    "index": 3,
+                    "parentId": "2034",
+                    "syncing": false,
+                    "title": "Scripting in Java Tutorial - Java in Scripting Languages",
+                    "url": "http://www.java2s.com/Tutorials/Java/Scripting_in_Java/0200__Java_in_Scripting_Languages.htm"
+                  }
+                ],
+                "dateAdded": 1749915282574,
+                "id": "2034",
+                "index": 26,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Java Nashorn Javascript"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2040",
+                    "index": 0,
+                    "parentId": "2039",
+                    "syncing": false,
+                    "title": "Vavr",
+                    "url": "http://www.vavr.io/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2041",
+                    "index": 1,
+                    "parentId": "2039",
+                    "syncing": false,
+                    "title": "resilience4j/resilience4j: Resilience4j is a fault tolerance library designed for Java8 and functional programming",
+                    "url": "https://github.com/resilience4j/resilience4j"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2042",
+                    "index": 2,
+                    "parentId": "2039",
+                    "syncing": false,
+                    "title": "HW VSP3 - Virtual Serial Port | HW-group.com",
+                    "url": "https://www.hw-group.com/software/hw-vsp3-virtual-serial-port"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2043",
+                    "index": 3,
+                    "parentId": "2039",
+                    "syncing": false,
+                    "title": "Ethernet 2 serial on RPi3 - Raspberry Pi Forums",
+                    "url": "https://www.raspberrypi.org/forums/viewtopic.php?t=186100"
+                  }
+                ],
+                "dateAdded": 1749915282574,
+                "id": "2039",
+                "index": 27,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Cool"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2045",
+                    "index": 0,
+                    "parentId": "2044",
+                    "syncing": false,
+                    "title": "Apache Camel: Spring Boot",
+                    "url": "http://camel.apache.org/spring-boot.html"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2046",
+                    "index": 1,
+                    "parentId": "2044",
+                    "syncing": false,
+                    "title": "Apache Camel: Download",
+                    "url": "http://camel.apache.org/download.html"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2047",
+                    "index": 2,
+                    "parentId": "2044",
+                    "syncing": false,
+                    "title": "ignacioSuay/Camel-HL7-Listener",
+                    "url": "https://github.com/ignacioSuay/Camel-HL7-Listener"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2048",
+                    "index": 3,
+                    "parentId": "2044",
+                    "syncing": false,
+                    "title": "How to create a Camel HL7 Listener – Ignacio Suay",
+                    "url": "http://ignaciosuay.com/how-to-create-a-camel-hl7-listener/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2049",
+                    "index": 4,
+                    "parentId": "2044",
+                    "syncing": false,
+                    "title": "spring-guides/gs-messaging-jms: Messaging with JMS :: Learn how to publish and subscribe to messages using a JMS broker.",
+                    "url": "https://github.com/spring-guides/gs-messaging-jms"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2050",
+                    "index": 5,
+                    "parentId": "2044",
+                    "syncing": false,
+                    "title": "Spring Boot Reference Guide",
+                    "url": "https://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#boot-features-external-config"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2051",
+                    "index": 6,
+                    "parentId": "2044",
+                    "syncing": false,
+                    "title": "HAPI – The Open Source HL7 API for Java",
+                    "url": "https://hapifhir.github.io/hapi-hl7v2/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2052",
+                    "index": 7,
+                    "parentId": "2044",
+                    "syncing": false,
+                    "title": "camel/examples at master · apache/camel",
+                    "url": "https://github.com/apache/camel/tree/master/examples#examples"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2053",
+                    "index": 8,
+                    "parentId": "2044",
+                    "syncing": false,
+                    "title": "Apache Camel: How do I use Spring Property Placeholder with Camel XML",
+                    "url": "http://camel.apache.org/how-do-i-use-spring-property-placeholder-with-camel-xml.html"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2054",
+                    "index": 9,
+                    "parentId": "2044",
+                    "syncing": false,
+                    "title": "Apache Camel Exchange Example | Examples Java Code Geeks - 2019",
+                    "url": "https://examples.javacodegeeks.com/enterprise-java/apache-camel/apache-camel-exchange-example/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2055",
+                    "index": 10,
+                    "parentId": "2044",
+                    "syncing": false,
+                    "title": "Apache Camel: Download",
+                    "url": "http://camel.apache.org/download.html"
+                  },
+                  {
+                    "children": [
+                      {
+                        "dateAdded": 1741170864000,
+                        "id": "2057",
+                        "index": 0,
+                        "parentId": "2056",
+                        "syncing": false,
+                        "title": "Apache Camel: HL7",
+                        "url": "https://camel.apache.org/hl7.html"
+                      },
+                      {
+                        "dateAdded": 1741170864000,
+                        "id": "2058",
+                        "index": 1,
+                        "parentId": "2056",
+                        "syncing": false,
+                        "title": "Dynamic registration of IPF features | Reflow Maven Skin",
+                        "url": "https://oehf.github.io/ipf/dynamic.html"
+                      },
+                      {
+                        "dateAdded": 1741170864000,
+                        "id": "2059",
+                        "index": 2,
+                        "parentId": "2056",
+                        "syncing": false,
+                        "title": "Custom DSL extensions definition | ipf-commons-core",
+                        "url": "https://oehf.github.io/ipf/ipf-commons-core/customExtensions.html"
+                      },
+                      {
+                        "dateAdded": 1741170864000,
+                        "id": "2060",
+                        "index": 3,
+                        "parentId": "2056",
+                        "syncing": false,
+                        "title": "Apache Camel: Spring Boot Example",
+                        "url": "http://camel.apache.org/spring-boot-example.html"
+                      },
+                      {
+                        "dateAdded": 1741170864000,
+                        "id": "2061",
+                        "index": 4,
+                        "parentId": "2056",
+                        "syncing": false,
+                        "title": "camel/pom.xml at master · apache/camel · GitHub",
+                        "url": "https://github.com/apache/camel/blob/master/examples/camel-example-spring-boot/pom.xml"
+                      },
+                      {
+                        "dateAdded": 1741170864000,
+                        "id": "2062",
+                        "index": 5,
+                        "parentId": "2056",
+                        "syncing": false,
+                        "title": "Spring Boot support | ipf-spring-boot-starter",
+                        "url": "http://oehf.github.io/ipf/ipf-spring-boot-starter/index.html"
+                      },
+                      {
+                        "dateAdded": 1741170864000,
+                        "id": "2063",
+                        "index": 6,
+                        "parentId": "2056",
+                        "syncing": false,
+                        "title": "Groovy Camel extensions | ipf-platform-camel-core",
+                        "url": "http://oehf.github.io/ipf/ipf-platform-camel-core/groovy.html#Groovy_Camel_extensions"
+                      },
+                      {
+                        "dateAdded": 1741170864000,
+                        "id": "2064",
+                        "index": 7,
+                        "parentId": "2056",
+                        "syncing": false,
+                        "title": "Apache Camel: Groovy DSL",
+                        "url": "http://camel.apache.org/groovy-dsl.html"
+                      },
+                      {
+                        "dateAdded": 1741170864000,
+                        "id": "2065",
+                        "index": 8,
+                        "parentId": "2056",
+                        "syncing": false,
+                        "title": "Apache Camel: Script",
+                        "url": "http://camel.apache.org/script.html"
+                      },
+                      {
+                        "dateAdded": 1741170864000,
+                        "id": "2066",
+                        "index": 9,
+                        "parentId": "2056",
+                        "syncing": false,
+                        "title": "Apache Camel: Getting Started",
+                        "url": "http://camel.apache.org/getting-started.html"
+                      },
+                      {
+                        "dateAdded": 1741170864000,
+                        "id": "2067",
+                        "index": 10,
+                        "parentId": "2056",
+                        "syncing": false,
+                        "title": "Apache Camel: Spring",
+                        "url": "http://camel.apache.org/spring.html"
+                      },
+                      {
+                        "dateAdded": 1741170864000,
+                        "id": "2068",
+                        "index": 11,
+                        "parentId": "2056",
+                        "syncing": false,
+                        "title": "Apache Camel: Download",
+                        "url": "http://camel.apache.org/download.html"
+                      },
+                      {
+                        "dateAdded": 1741170864000,
+                        "id": "2069",
+                        "index": 12,
+                        "parentId": "2056",
+                        "syncing": false,
+                        "title": "Apache Camel: Scripting Languages",
+                        "url": "http://camel.apache.org/scripting-languages.html"
+                      },
+                      {
+                        "dateAdded": 1741170864000,
+                        "id": "2070",
+                        "index": 13,
+                        "parentId": "2056",
+                        "syncing": false,
+                        "title": "Apache Camel: DSL",
+                        "url": "http://camel.apache.org/dsl.html"
+                      },
+                      {
+                        "dateAdded": 1741170864000,
+                        "id": "2071",
+                        "index": 14,
+                        "parentId": "2056",
+                        "syncing": false,
+                        "title": "Apache Camel: Groovy DSL",
+                        "url": "http://camel.apache.org/groovy-dsl.html"
+                      }
+                    ],
+                    "dateAdded": 1749915282575,
+                    "id": "2056",
+                    "index": 11,
+                    "parentId": "2044",
+                    "syncing": false,
+                    "title": "Neuer Ordner"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2072",
+                    "index": 12,
+                    "parentId": "2044",
+                    "syncing": false,
+                    "title": "info",
+                    "url": "https://code.visualstudio.com/docs/editor/editingevolved"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2073",
+                    "index": 13,
+                    "parentId": "2044",
+                    "syncing": false,
+                    "title": "Lesezeichen",
+                    "url": "chrome://bookmarks/?id=56"
+                  }
+                ],
+                "dateAdded": 1749915282574,
+                "id": "2044",
+                "index": 28,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Spring/Camel"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2075",
+                    "index": 0,
+                    "parentId": "2074",
+                    "syncing": false,
+                    "title": "Run Java Tests With Maven Silently (Only Log on Failure) - rieckpil",
+                    "url": "https://rieckpil.de/run-java-tests-with-maven-silently-only-log-on-failure/"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2076",
+                    "index": 1,
+                    "parentId": "2074",
+                    "syncing": false,
+                    "title": "Setting the Log Level in Spring Boot when Testing | Baeldung",
+                    "url": "https://www.baeldung.com/spring-boot-testing-log-level"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2077",
+                    "index": 2,
+                    "parentId": "2074",
+                    "syncing": false,
+                    "title": "Chapter 3: Configuration",
+                    "url": "https://logback.qos.ch/manual/configuration.html"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2078",
+                    "index": 3,
+                    "parentId": "2074",
+                    "syncing": false,
+                    "title": "Maven not running JUnit 5 tests - Stack Overflow",
+                    "url": "https://stackoverflow.com/questions/53433663/maven-not-running-junit-5-tests"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2079",
+                    "index": 4,
+                    "parentId": "2074",
+                    "syncing": false,
+                    "title": "Maven Surefire Plugin – Using JUnit 5 Platform",
+                    "url": "https://maven.apache.org/surefire/maven-surefire-plugin/examples/junit-platform.html"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2080",
+                    "index": 5,
+                    "parentId": "2074",
+                    "syncing": false,
+                    "title": "java - Maven does not find JUnit tests to run - Stack Overflow",
+                    "url": "https://stackoverflow.com/questions/6178583/maven-does-not-find-junit-tests-to-run"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2081",
+                    "index": 6,
+                    "parentId": "2074",
+                    "syncing": false,
+                    "title": "Core Features",
+                    "url": "https://docs.spring.io/spring-boot/docs/current/reference/html/features.html#features.testing.spring-boot-applications.autoconfigured-tests"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2082",
+                    "index": 7,
+                    "parentId": "2074",
+                    "syncing": false,
+                    "title": "java - SpringRunner vs SpringBootTest - Stack Overflow",
+                    "url": "https://stackoverflow.com/questions/58901288/springrunner-vs-springboottest"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2083",
+                    "index": 8,
+                    "parentId": "2074",
+                    "syncing": false,
+                    "title": "java - How do I get my Maven Integration tests to run - Stack Overflow",
+                    "url": "https://stackoverflow.com/questions/1399240/how-do-i-get-my-maven-integration-tests-to-run"
+                  }
+                ],
+                "dateAdded": 1749915282575,
+                "id": "2074",
+                "index": 29,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Testing"
+              },
+              {
+                "children": [
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2085",
+                    "index": 0,
+                    "parentId": "2084",
+                    "syncing": false,
+                    "title": "Lifecycles Reference",
+                    "url": "https://maven.apache.org/ref/3.8.5/maven-core/lifecycles.html"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2086",
+                    "index": 1,
+                    "parentId": "2084",
+                    "syncing": false,
+                    "title": "Maven – Introduction to the Build Lifecycle",
+                    "url": "https://maven.apache.org/guides/introduction/introduction-to-the-lifecycle.html#Lifecycle_Reference"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2087",
+                    "index": 2,
+                    "parentId": "2084",
+                    "syncing": false,
+                    "title": "Maven Goals and Phases | Baeldung",
+                    "url": "https://www.baeldung.com/maven-goals-phases"
+                  },
+                  {
+                    "dateAdded": 1741170864000,
+                    "id": "2088",
+                    "index": 3,
+                    "parentId": "2084",
+                    "syncing": false,
+                    "title": "Maven beyond mvn clean install | Novatec - Novatec",
+                    "url": "https://www.novatec-gmbh.de/en/blog/maven-beyond-mvn-clean-install/"
+                  }
+                ],
+                "dateAdded": 1749915282576,
+                "id": "2084",
+                "index": 30,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Maven"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2089",
+                "index": 31,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "openssl - GoDoc",
+                "url": "https://godoc.org/github.com/spacemonkeygo/openssl"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2090",
+                "index": 32,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "FORUM Family Home - FORUM Family - ZEISS Wiki",
+                "url": "https://wiki.zeiss.com/pages/viewpage.action?spaceKey=forumfamily&title=FORUM+Family+Home"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2091",
+                "index": 33,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Home - Microsoft Azure",
+                "url": "https://portal.azure.com/#home"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2092",
+                "index": 34,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Zeiss Wiki FORUM Family Home",
+                "url": "https://wiki.zeiss.com/display/forumfamily/FORUM+Family+Home"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2093",
+                "index": 35,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Index | FORUM",
+                "url": "https://localhost:8181/ui/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2094",
+                "index": 36,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Codeanalysis",
+                "url": "https://codeanalysis.zeiss.com/sonarqube/projects"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2095",
+                "index": 37,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Convert PDF to DICOM",
+                "url": "https://groups.google.com/g/dcm4che/c/g_nuKyYB6ss?pli=1"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2096",
+                "index": 38,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "HL7 FORUM Conformance",
+                "url": "https://www.zeiss.com/content/dam/med/ref_international/resource-center/conformance-and-interoperability/hl7/hl7_conformance_statement_forum_4.2.pdf"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2097",
+                "index": 39,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "DICOM Validator - dciodvfy",
+                "url": "https://www.dclunie.com/dicom3tools/dciodvfy.html"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2098",
+                "index": 40,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Conformance & interoperability - ZEISS Medical Technology | ZEISS International",
+                "url": "https://www.zeiss.com/meditec/int/product-portfolio/conformance-interoperability.html?vaURL=www.zeiss.com/dicom"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2099",
+                "index": 41,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "md2pdf - Markdown to PDF",
+                "url": "https://md2pdf.netlify.app/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2100",
+                "index": 42,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Junit 5 Asserts Exceptions | wesome.org",
+                "url": "https://wesome.org/junit-5-asserts-exceptions"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2101",
+                "index": 43,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "LinkedIn Learning mit Lynda: Onlinekurse aus dem Business-, Technik- und Kreativbereich",
+                "url": "https://www.linkedin.com/learning/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2102",
+                "index": 44,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "FOSS Disclosure - Open Source Guidebook - ZEISS Wiki",
+                "url": "https://wiki.zeiss.com/display/FOSS/FOSS+Disclosure"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2103",
+                "index": 45,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Overview (BlackDuck) - Open Source Guidebook - ZEISS Wiki",
+                "url": "https://wiki.zeiss.com/pages/viewpage.action?pageId=387680848"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2104",
+                "index": 46,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Scan with Black Duck Configuration — TeamCity",
+                "url": "http://tc-medmuc:8083/admin/editBuildParams.html?id=buildType:ForumPlugins_Riem_Riem28_AnalysisService_ScanWithBlackDuck"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2105",
+                "index": 47,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "bd-java-tools - Repos",
+                "url": "https://dev.azure.com/ZEISSgroup/SIP_FOSS_Helpers/_git/bd-java-tools"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2106",
+                "index": 48,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Concept for FORUM 4.3 - FORUM Family - ZEISS Wiki",
+                "url": "https://wiki.zeiss.com/display/forumfamily/Concept+for+FORUM+4.3"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2107",
+                "index": 49,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "it-security-guideline/Guideline-IT-Security_EN.md at master · johner-institut/it-security-guideline",
+                "url": "https://github.com/johner-institut/it-security-guideline/blob/master/Guideline-IT-Security_EN.md#d-product-requirements"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2108",
+                "index": 50,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "java - Maven dependency resolution (conflicted) - Stack Overflow",
+                "url": "https://stackoverflow.com/questions/7175398/maven-dependency-resolution-conflicted"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2109",
+                "index": 51,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Wie sieht die vollständige Liste der Emoticons aus? | Skype-Support",
+                "url": "https://support.skype.com/de/faq/FA12330/wie-sieht-die-vollstandige-liste-der-emoticons-aus"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2110",
+                "index": 52,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Multiple versions of the same dependency in Maven - Stack Overflow",
+                "url": "https://stackoverflow.com/questions/24962607/multiple-versions-of-the-same-dependency-in-maven"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2111",
+                "index": 53,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Managing Maven Dependencies - tips and tricks",
+                "url": "https://www.squins.com/knowledge/managing-maven-dependencies/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2112",
+                "index": 54,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Guide for Supporting Multiple Versions of Java (8, 11, 14) in Your Maven Project - DZone Java",
+                "url": "https://dzone.com/articles/guide-for-supporting-multiple-versions-of-java-8-1"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2113",
+                "index": 55,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Maven – Introduction to the Dependency Mechanism",
+                "url": "https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2114",
+                "index": 56,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "A declarative Jenkins pipeline for Ant builds on Docker example",
+                "url": "https://www.theserverside.com/blog/Coffee-Talk-Java-News-Stories-and-Opinions/jenkins-ant-docker-example-git-github-java-jdk-tutorial"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2115",
+                "index": 57,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Java Concurrency / Multithreading Basics | CalliCoder",
+                "url": "https://www.callicoder.com/java-concurrency-multithreading-basics/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2116",
+                "index": 58,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Java CompletableFuture Tutorial with Examples | CalliCoder",
+                "url": "https://www.callicoder.com/java-8-completablefuture-tutorial/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2117",
+                "index": 59,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "List of `curl` options",
+                "url": "https://gist.github.com/eneko/dc2d8edd9a4b25c5b0725dd123f98b10"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2118",
+                "index": 60,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "streamsigner - Repos",
+                "url": "https://dev.azure.com/ZEISSgroup-MED/MUC_Configuration-Management/_git/streamsigner?anchor=streamsigner"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2119",
+                "index": 61,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Veracity Swagger UI",
+                "url": "https://ew1.veracitydoc.com/api/emr-integration/api-docs/#/Patient%20Medical%20Data/post_v1_sendMedicalData"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2120",
+                "index": 62,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "How to Configure Spring Boot Tomcat | Baeldung",
+                "url": "https://www.baeldung.com/spring-boot-configure-tomcat"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2121",
+                "index": 63,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Code Signing with USB Tokens",
+                "url": "https://www.finalbuilder.com/resources/blogs/code-signing-with-usb-tokens"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2122",
+                "index": 64,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Code Signing with USB Tokens: Meaning, Working, and Set up",
+                "url": "https://signmycode.com/blog/code-signing-with-usb-tokens-a-comprehensive-guide"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2123",
+                "index": 65,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Safenet Drivers :: Safenet Drivers :: GlobalSign Support",
+                "url": "https://support.globalsign.com/ssl/ssl-certificates-installation/safenet-drivers#Linux%20Ubuntu"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2124",
+                "index": 66,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Sign a Windows App on Linux Using osslsigncode",
+                "url": "https://knowledge.digicert.com/tutorials/sign-a-windows-app-on-linux-using-osslsigncode"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2125",
+                "index": 67,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Sign Authenticode files with Osslsigncode on Linux",
+                "url": "https://docs.digicert.com/en/software-trust-manager/signing-tools/osslsigncode-with-pkcs11.html"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2126",
+                "index": 68,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "Home",
+                "url": "https://training-med-polarion.zeiss.com/polarion/#/home"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2127",
+                "index": 69,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "ZEISS ID Management Portal Sign up",
+                "url": "https://zeissidadminb2cstage.b2clogin.com/zeissidadminb2cstage.onmicrosoft.com/oauth2/authresp"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2128",
+                "index": 70,
+                "parentId": "1938",
+                "syncing": false,
+                "title": "days",
+                "url": "https://www.postgresql.org/docs/current/functions-datetime.html"
+              }
+            ],
+            "dateAdded": 1749915282570,
+            "id": "1938",
+            "index": 5,
+            "parentId": "1",
+            "syncing": false,
+            "title": "DEV"
+          },
+          {
+            "children": [
+              {
+                "dateAdded": 1741170864000,
+                "id": "2130",
+                "index": 0,
+                "parentId": "2129",
+                "syncing": false,
+                "title": "Hydra",
+                "url": "https://localhost:8443/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2131",
+                "index": 1,
+                "parentId": "2129",
+                "syncing": false,
+                "title": "Hydra Box",
+                "url": "https://192.168.1.28:8443/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2132",
+                "index": 2,
+                "parentId": "2129",
+                "syncing": false,
+                "title": "Hadern Monitor",
+                "url": "https://localhost:8090/monitor"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2133",
+                "index": 3,
+                "parentId": "2129",
+                "syncing": false,
+                "title": "Swagger UI",
+                "url": "https://localhost:8090/swagger-ui/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2134",
+                "index": 4,
+                "parentId": "2129",
+                "syncing": false,
+                "title": "JEN_VISUCONNECT",
+                "url": "https://dev.azure.com/ZEISSgroup-MED/JEN_VISUCONNECT"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2135",
+                "index": 5,
+                "parentId": "2129",
+                "syncing": false,
+                "title": "Swagger UI",
+                "url": "https://localhost:8090/swagger-ui/index.html"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2136",
+                "index": 6,
+                "parentId": "2129",
+                "syncing": false,
+                "title": "Black Duck",
+                "url": "https://zeiss.app.blackduck.com/api/risk-profile-dashboard?limit=25&offset=0"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2137",
+                "index": 7,
+                "parentId": "2129",
+                "syncing": false,
+                "title": "Swagger UI",
+                "url": "https://hapi.fhir.org/baseR4/swagger-ui/?page=Patient#/Patient/get_Patient__id_"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2138",
+                "index": 8,
+                "parentId": "2129",
+                "syncing": false,
+                "title": "VISUCONNECT 600 Doku",
+                "url": "https://zeiss-my.sharepoint.com/personal/fred_brodmueller_zeiss_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Ffred_brodmueller_zeiss_com%2FDocuments%2FMicrosoft%20Teams-Chatdateien%2F000000-2374-957-DokS-SW-DE-230222%20%283%29%2Epdf&parent=%2Fpersonal%2Ffred_brodmueller_zeiss_com%2FDocuments%2FMicrosoft%20Teams-Chatdateien&ga=1"
+              }
+            ],
+            "dateAdded": 1749915282578,
+            "id": "2129",
+            "index": 6,
+            "parentId": "1",
+            "syncing": false,
+            "title": "Hadern-Hydra"
+          },
+          {
+            "children": [
+              {
+                "dateAdded": 1741170864000,
+                "id": "2140",
+                "index": 0,
+                "parentId": "2139",
+                "syncing": false,
+                "title": "bolkedebruin/rdpgw: Remote Desktop Gateway in Go for deploying on Linux/BSD/Kubernetes",
+                "url": "https://github.com/bolkedebruin/rdpgw"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2141",
+                "index": 1,
+                "parentId": "2139",
+                "syncing": false,
+                "title": "iSchluff/simplevnc: Node.js based VNC browser client (client+server) for embedding into your own applications.",
+                "url": "https://github.com/iSchluff/simplevnc"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2142",
+                "index": 2,
+                "parentId": "2139",
+                "syncing": false,
+                "title": "StackEdit",
+                "url": "https://stackedit.io/app#"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2143",
+                "index": 3,
+                "parentId": "2139",
+                "syncing": false,
+                "title": "A step by step guide to mTLS in Go",
+                "url": "https://venilnoronha.io/a-step-by-step-guide-to-mtls-in-go"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2144",
+                "index": 4,
+                "parentId": "2139",
+                "syncing": false,
+                "title": "cert-manager",
+                "url": "https://cert-manager.io/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2145",
+                "index": 5,
+                "parentId": "2139",
+                "syncing": false,
+                "title": "kubernetes/kops: Kubernetes Operations (kOps) - Production Grade k8s Installation, Upgrades and Management",
+                "url": "https://github.com/kubernetes/kops?tab=readme-ov-file"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2146",
+                "index": 6,
+                "parentId": "2139",
+                "syncing": false,
+                "title": "Setting up single-node Kubernetes clusters",
+                "url": "https://bell-sw.com/announcements/2022/09/14/how-to-create-a-single-node-kubernetes-cluster/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2147",
+                "index": 7,
+                "parentId": "2139",
+                "syncing": false,
+                "title": "Kubernetes Deployment YAML: Learn by Example",
+                "url": "https://codefresh.io/learn/kubernetes-deployment/kubernetes-deployment-yaml/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2148",
+                "index": 8,
+                "parentId": "2139",
+                "syncing": false,
+                "title": "mackyle/xar — How To Sign an xar File",
+                "url": "https://mackyle.github.io/xar/howtosign.html"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2149",
+                "index": 9,
+                "parentId": "2139",
+                "syncing": false,
+                "title": "xcode - How to sign Mac OS X application? - Stack Overflow",
+                "url": "https://stackoverflow.com/questions/5341755/how-to-sign-mac-os-x-application"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2150",
+                "index": 10,
+                "parentId": "2139",
+                "syncing": false,
+                "title": "ios - xcodebuild how to sign app with command line? - Stack Overflow",
+                "url": "https://stackoverflow.com/questions/28395427/xcodebuild-how-to-sign-app-with-command-line"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2151",
+                "index": 11,
+                "parentId": "2139",
+                "syncing": false,
+                "title": "passwords - Automate Extended Validation (EV) code signing with SafeNet eToken - Stack Overflow",
+                "url": "https://stackoverflow.com/questions/17927895/automate-extended-validation-ev-code-signing-with-safenet-etoken"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2152",
+                "index": 12,
+                "parentId": "2139",
+                "syncing": false,
+                "title": "Lighthouse Blog Kontakt - Lighthouse Blog - Blog über Fotografie, Fine Art und Fotoschule",
+                "url": "https://www.lighthouse-blog.de/kontakt/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2153",
+                "index": 13,
+                "parentId": "2139",
+                "syncing": false,
+                "title": "Wie richte ich ein Google reCAPTCHA ein (Wordpress / Joomla)? - kreativmedia.ch",
+                "url": "https://www.kreativmedia.ch/de/google-recaptcha-einrichten"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2154",
+                "index": 14,
+                "parentId": "2139",
+                "syncing": false,
+                "title": "azappconfig package - github.com/Azure/azure-sdk-for-go/sdk/appconfig/azappconfig - Go Packages",
+                "url": "https://pkg.go.dev/github.com/Azure/azure-sdk-for-go/sdk/appconfig/azappconfig#section-readme"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2155",
+                "index": 15,
+                "parentId": "2139",
+                "syncing": false,
+                "title": "Running Pi-Hole within a Docker Container",
+                "url": "https://pimylifeup.com/pi-hole-docker/"
+              }
+            ],
+            "dateAdded": 1749915282578,
+            "id": "2139",
+            "index": 7,
+            "parentId": "1",
+            "syncing": false,
+            "title": "Interessant"
+          },
+          {
+            "children": [
+              {
+                "dateAdded": 1741170864000,
+                "id": "2157",
+                "index": 0,
+                "parentId": "2156",
+                "syncing": false,
+                "title": "Brücken und Schleusen | heise online",
+                "url": "https://www.heise.de/ratgeber/Der-Ruhrtal-Radweg-9647652.html?seite=4"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2158",
+                "index": 1,
+                "parentId": "2156",
+                "syncing": false,
+                "title": "Unterkünfte entlang des RuhrtalRadwegs",
+                "url": "https://www.ruhrtalradweg.de/de/gastgebende/unterkuenfte"
+              }
+            ],
+            "dateAdded": 1749915282579,
+            "id": "2156",
+            "index": 8,
+            "parentId": "1",
+            "syncing": false,
+            "title": "Reisen"
+          },
+          {
+            "children": [
+              {
+                "dateAdded": 1741170864000,
+                "id": "2160",
+                "index": 0,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "Connectivity between MED Device DLZ and ZSS - Overview",
+                "url": "https://dev.azure.com/ZEISSgroup-MED/GEN_Connected_Customer_Care/_wiki/wikis/GEN_Connected_Customer_Care.wiki/20301/Connectivity-between-MED-Device-DLZ-and-ZSS"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2161",
+                "index": 1,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "Golang with Azure – Medium",
+                "url": "https://medium.com/golang-with-azure"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2162",
+                "index": 2,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "Build a Go (golang) web app on Azure - full tutorial - YouTube",
+                "url": "https://www.youtube.com/watch?v=Te9bF01iqWM"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2163",
+                "index": 3,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "Summary - Overview",
+                "url": "https://dev.azure.com/ZEISSgroup-MED/GEN_Health_Data_Platform/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2164",
+                "index": 4,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "CCC Kogent Logfile processing - Overview",
+                "url": "https://dev.azure.com/ZEISSgroup-MED/GEN_Connected_Customer_Care/_wiki/wikis/GEN_Connected_Customer_Care.wiki/20994/CCC-Kogent-Logfile-processing"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2165",
+                "index": 5,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "ESB Portal Zeiss",
+                "url": "https://esb-dev-portal.zeiss.com/signin"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2166",
+                "index": 6,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "hdpcore - Repos",
+                "url": "https://dev.azure.com/ZEISSgroup-MED/GEN_Health_Data_Platform/_git/hdpcore"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2167",
+                "index": 7,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "Authentifizierung mit dem Azure SDK für Go (Legacy) - Go on Azure | Microsoft Learn",
+                "url": "https://learn.microsoft.com/de-de/azure/developer/go/azure-sdk-authorization"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2168",
+                "index": 8,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "Datalist_WF_Cranialtumor.xlsx",
+                "url": "https://zeiss.sharepoint.com/:x:/r/sites/health-data-platform/_layouts/15/Doc.aspx?sourcedoc=%7B90E16980-B28E-4354-A13B-F6C3D1DF8095%7D&file=Datalist_WF_Cranialtumor.xlsx&wdLOR=cB48B5845-F004-44C2-A069-180F18B5094F&action=default&mobileredirect=true&ovuser=28042244-bb51-4cd6-8034-7776fa3703e8%2Cmarcel.petavy%40zeiss.com&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiI0OS8yNDA1MzEwMTQyMSIsIkhhc0ZlZGVyYXRlZFVzZXIiOmZhbHNlfQ%3D%3D"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2169",
+                "index": 9,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "Work Items",
+                "url": "https://training-med-polarion.zeiss.com/polarion/#/workitems?query=NOT%20HAS_VALUE%3Aresolution"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2170",
+                "index": 10,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "Frequently Asked Questions < 00 FAQ < Documents & Pages < avasisPolarionTraining",
+                "url": "https://test-med-polarion.zeiss.com/polarion/#/project/avasisPolarionTraining/wiki/FAQ/FrequentlyAskedQuestions"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2171",
+                "index": 11,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "Polarion Documents & Pages < DHS_HDP_HAKODATE",
+                "url": "https://prod-med-polarion.zeiss.com/polarion/#/project/DHS_HDP_HAKODATE/wiki"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2172",
+                "index": 12,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "Was ist ein Bearer Token? Beispiel einer API Autorisierung über HTTP",
+                "url": "https://www.predic8.de/bearer-token-autorisierung-api-security.htm"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2173",
+                "index": 13,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "ZEISS ID Stage",
+                "url": "https://id-mgmt-stage.zeiss.com/ClientApplications/Edit?id=621"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2174",
+                "index": 14,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "ZEISS ID Prod",
+                "url": "https://id-mgmt.zeiss.com/ClientApplications/Edit?id=446"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2175",
+                "index": 15,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "MUC_Hakodate",
+                "url": "https://dev.azure.com/ZEISSgroup-MED/MUC_HAKODATE/_wiki/wikis/MUC_HAKODATE.wiki/21428/Hakodate-RFC"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2176",
+                "index": 16,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "MUC_HAKODATE Team Sprint 1 Taskboard - Boards",
+                "url": "https://dev.azure.com/ZEISSgroup-MED/MUC_HAKODATE/_sprints/taskboard/MUC_HAKODATE%20Team/MUC_HAKODATE/Sprint%201"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2177",
+                "index": 17,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "HDP Core Swagger UI",
+                "url": "https://apidocs.hdpcore.zeiss.com/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2178",
+                "index": 18,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "HDP Core Documentation Wiki - Overview",
+                "url": "https://dev.azure.com/ZEISSgroup-MED/GEN_Health_Data_Platform/_wiki/wikis/HDP%20Core%20Documentation%20Wiki/6508/HDP-Core-Documentation-Wiki"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2179",
+                "index": 19,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "ZEISS ID - Overview",
+                "url": "https://dev.azure.com/ZEISSgroup-MED/GEN_Health_Data_Platform/_wiki/wikis/GEN_Health_Data_Platform_wiki/1922/ZEISS-ID"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2180",
+                "index": 20,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "Onboarding APP to HDP Core - Health Data Platform (HDP) - ZEISS Wiki",
+                "url": "https://wiki.zeiss.com/pages/viewpage.action?spaceKey=HDP&title=Onboarding%20APP%20to%20HDP%20Core"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2181",
+                "index": 21,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "Zeiss ID REST API",
+                "url": "https://wiki.zeiss.com/pages/viewpage.action?spaceKey=CIP&title=REST+API"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2182",
+                "index": 22,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "Hakodate - Miro",
+                "url": "https://miro.com/app/board/uXjVK2xp2jc=/?share_link_id=991970583127"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2183",
+                "index": 23,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "Online JSON Viewer and Formatter",
+                "url": "https://jsonviewer.stack.hu/"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2184",
+                "index": 24,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "Azure-Samples/azure-sdk-for-go-samples: Examples of how to utilize Azure services from Go.",
+                "url": "https://github.com/azure-samples/azure-sdk-for-go-samples"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2185",
+                "index": 25,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "Calling Azure REST API via curl",
+                "url": "https://mauridb.medium.com/calling-azure-rest-api-via-curl-eb10a06127"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2186",
+                "index": 26,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "Create an Azure Function with Golang",
+                "url": "https://medium.com/@krishnan.srm/create-an-azure-function-with-golang-633e065bbaf3"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2187",
+                "index": 27,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "Step by step guide to deploy Golang Application on Azure Web App",
+                "url": "https://medium.com/@durgaprasadbudhwani/step-by-step-guide-to-deploy-golang-application-on-azure-web-app-46ba3befb4c0"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2188",
+                "index": 28,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "SonarQube MED_Hakodate",
+                "url": "https://codeanalysis.zeiss.com/sonarqube/dashboard?id=MED_Hakodate"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2189",
+                "index": 29,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "Getting Started (Coverity) - Security Tooling @ZEISS - ZEISS Wiki",
+                "url": "https://wiki.zeiss.com/pages/viewpage.action?pageId=423855815"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2190",
+                "index": 30,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "Find tenant ID, domain name, user object ID",
+                "url": "https://learn.microsoft.com/en-us/partner-center/account-settings/find-ids-and-domain-names"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2191",
+                "index": 31,
+                "parentId": "2159",
+                "syncing": false,
+                "title": "Welcome!",
+                "url": "https://minikube.sigs.k8s.io/docs/"
+              }
+            ],
+            "dateAdded": 1749915282579,
+            "id": "2159",
+            "index": 9,
+            "parentId": "1",
+            "syncing": false,
+            "title": "Zeiss Hakodate"
+          },
+          {
+            "children": [
+              {
+                "dateAdded": 1741170864000,
+                "id": "2193",
+                "index": 0,
+                "parentId": "2192",
+                "syncing": false,
+                "title": "Summary - Overview",
+                "url": "https://dev.azure.com/ZEISSgroup-MED/GEN_Connected_Customer_Care"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2194",
+                "index": 1,
+                "parentId": "2192",
+                "syncing": false,
+                "title": "Datalist_WF_Cranialtumor.xlsx",
+                "url": "https://zeiss.sharepoint.com/:x:/r/sites/health-data-platform/_layouts/15/Doc.aspx?sourcedoc=%7B90E16980-B28E-4354-A13B-F6C3D1DF8095%7D&file=Datalist_WF_Cranialtumor.xlsx&wdLOR=cDACBBF24-F4C5-46DC-A22B-ABAF2A795C31&action=default&mobileredirect=true&isSPOFile=1&clickparams=eyJBcHBOYW1lIjoiVGVhbXMtRGVza3RvcCIsIkFwcFZlcnNpb24iOiIxNDE1LzI0MDkxMjIxMzE4IiwiSGFzRmVkZXJhdGVkVXNlciI6ZmFsc2V9"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2195",
+                "index": 2,
+                "parentId": "2192",
+                "syncing": false,
+                "title": "Kubernetes configuration files - Overview",
+                "url": "https://dev.azure.com/ZEISSgroup-MED/GEN_Connected_Customer_Care/_wiki/wikis/GEN_Connected_Customer_Care.wiki/23267/Kubernetes-configuration-files"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2196",
+                "index": 3,
+                "parentId": "2192",
+                "syncing": false,
+                "title": "Epic 847625: CCC Data Ingress - Boards",
+                "url": "https://dev.azure.com/ZEISSgroup-MED/GEN_Connected_Customer_Care/_workitems/edit/847625"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2197",
+                "index": 4,
+                "parentId": "2192",
+                "syncing": false,
+                "title": "Zeiss DMS HAKODATE Dokumnete",
+                "url": "https://dms-med.zeiss.org/product/56/18/Documents/Forms/DMS%20Document%20Set/docsethomepage.aspx?ID=5&FolderCTID=0x0120D520000812C0E5D26EE24B9103BE64D417206300FA4C609D9C40A741B7E454AB6F3C6427&List=f5e38bcd-6520-4ebc-bd6f-1538593bdaa1&RootFolder=%2Fproduct%2F56%2F18%2FDocuments%2F0000174856-01&RecSrc=%2Fproduct%2F56%2F18%2FDocuments%2F0000174856-01"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2198",
+                "index": 5,
+                "parentId": "2192",
+                "syncing": false,
+                "title": "CCC REST API RFC - Overview",
+                "url": "https://dev.azure.com/ZEISSgroup-MED/GEN_Connected_Customer_Care/_wiki/wikis/GEN_Connected_Customer_Care.wiki/23266/CCC-REST-API-RFC?anchor=request"
+              }
+            ],
+            "dateAdded": 1749915282580,
+            "id": "2192",
+            "index": 10,
+            "parentId": "1",
+            "syncing": false,
+            "title": "Zeiss Dataingres"
+          },
+          {
+            "children": [
+              {
+                "dateAdded": 1741170864000,
+                "id": "2200",
+                "index": 0,
+                "parentId": "2199",
+                "syncing": false,
+                "title": "Sign a Windows App on Linux Using osslsigncode",
+                "url": "https://knowledge.digicert.com/tutorials/sign-a-windows-app-on-linux-using-osslsigncode"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2201",
+                "index": 1,
+                "parentId": "2199",
+                "syncing": false,
+                "title": "eToken PKI Client 3.65 Guide for Linux",
+                "url": "https://uni-tuebingen.de/fileadmin/Uni_Tuebingen/Einrichtungen/ZDV/Dokumente/Software/CA-SW/PKIClient3.65DokuLinux.pdf"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2202",
+                "index": 2,
+                "parentId": "2199",
+                "syncing": false,
+                "title": "Token Based JAR Signing in Linux Environments :: Token Based JAR Signing in Linux Environments :: GlobalSign Support",
+                "url": "https://support.globalsign.com/code-signing/token-based-jar-signing-linux-environments"
+              },
+              {
+                "dateAdded": 1741170864000,
+                "id": "2203",
+                "index": 3,
+                "parentId": "2199",
+                "syncing": false,
+                "title": "linux code sign with usb token - Google Suche",
+                "url": "https://www.google.com/search?q=linux+code+sign+with+usb+token&sca_esv=3f074e5da93b5e88&sca_upv=1&rlz=1C1GCEA_enDE968DE968&sxsrf=ADLYWILR81p1nJph0DAtX8TKJs8VBfNJoA%3A1717423338524&ei=6sxdZoDPH9WL9u8PsI2C4Ak&ved=0ahUKEwiA7JXAzL-GAxXVhf0HHbCGAJwQ4dUDCBA&uact=5&oq=linux+code+sign+with+usb+token&gs_lp=Egxnd3Mtd2l6LXNlcnAiHmxpbnV4IGNvZGUgc2lnbiB3aXRoIHVzYiB0b2tlbjIIEAAYgAQYogQyCBAAGIAEGKIEMggQABiABBiiBEiKZFDUKli4X3ADeACQAQCYAZQBoAGkFKoBBDYuMTi4AQPIAQD4AQGYAhSgAuYOwgIKEAAYsAMY1gQYR8ICBxAjGLACGCfCAggQABiiBBiJBZgDAIgGAZAGCJIHBDcuMTOgB-NS&sclient=gws-wiz-serp"
+              }
+            ],
+            "dateAdded": 1749915282580,
+            "id": "2199",
+            "index": 11,
+            "parentId": "1",
+            "syncing": false,
+            "title": "Streamsigner"
+          },
+          {
+            "dateAdded": 1741170864000,
+            "id": "2204",
+            "index": 12,
+            "parentId": "1",
+            "syncing": false,
+            "title": "GitHub - mrusme/xbsapi: Alternative xBrowserSync API that is a single binary and supports SQLite3, PostgreSQL and MySQL",
+            "url": "https://github.com/mrusme/xbsapi/"
+          },
+          {
+            "dateAdded": 1741170864000,
+            "id": "2205",
+            "index": 13,
+            "parentId": "1",
+            "syncing": false,
+            "title": "Azure Portal",
+            "url": "https://login.microsoftonline.com/petavygmx.onmicrosoft.com/oauth2/v2.0/authorize?redirect_uri=https%3A%2F%2Fportal.azure.com%2Fsignin%2Findex%2F&response_type=code%20id_token&scope=https%3A%2F%2Fmanagement.core.windows.net%2F%2Fuser_impersonation%20openid%20email%20profile&state=OpenIdConnect.AuthenticationProperties%3DhjxVx8qh4j9bXjEt6hMNHu2cR16NCyOU2zGmhWG0op9ymV87WXm-tAP1cG63RyYOJFvBJNrmbiW55kr9sWkmALAIfPfkxRsSCKhwS01VJFeq8TpOgcOr_oBn01iBT_mA1zNcaimfCyH8NqTCixNqVTpg_0HPWX9PWnpDRO2m2IAVnn1EPvzx19P_5vp4MC5yoQMb-uzRP1uL6gJIUA231cJ9p-AvA_TnXakjE0WACm92cLe7Yj3QOknPH4mUQB2kleM0Z_-Hhwb0BMKHk_7ciVANzwwz8CIUzsEOtPXLJDS8qTGkEEpUGBTzkCXLIrgigQNYh1POGRhOINrUF9edhh1Efiojchq7WW8WnjoW5hiPJf-u1hsrfEQe00lK18_7KS__BzX8DXiEuj3_WJHNuRCx_YwPVvs2WkM8Lw4pJ1bVUyDu1JiYcaf8arL0lpTdHMN0C1Hsg0poTJfrL-4EdIs_yaf0eM934kuv5JgidzIxQp7r3GsXtuJlc5F8sH5HAtDZ2eDs1StjG2eTPcIBK0xUyDaD0i9LHy9pqOekAL59XeDEYn0Tku0xWuSwQ18I2LgRjhVKu-3h84iW1NL_vEde4kuDp9sh7To1b2_1aGk&response_mode=form_post&nonce=638652754283936592.NTg0MDdhYjYtZmUwNi00ZThjLWE5MzItM2ZmYTZjNzE5YWMyNmFmYzBmN2QtYWMxOC00MjhiLWJjYWQtNjBkODRkMmI3Y2Q3&client_id=c44b4083-3bb0-49c1-b47d-974e53cbdf3c&site_id=501430&client-request-id=c162201a-341e-46d8-a49d-b866290cdf06&x-client-SKU=ID_NET472&x-client-ver=7.5.0.0"
+          },
+          {
+            "dateAdded": 1741170864000,
+            "id": "2206",
+            "index": 14,
+            "parentId": "1",
+            "syncing": false,
+            "title": "pgAdmin 4",
+            "url": "http://localhost:5000/browser/"
+          },
+          {
+            "dateAdded": 1741170864000,
+            "id": "2207",
+            "index": 15,
+            "parentId": "1",
+            "syncing": false,
+            "title": "(3) Letter to my wife #mattberrycomedy #mikeandjoelle #boxingalleymike #husbandandwifecomedy #marriage - YouTube",
+            "url": "https://www.youtube.com/shorts/avBWu2sNz0k"
+          },
+          {
+            "dateAdded": 1741170864000,
+            "id": "2208",
+            "index": 16,
+            "parentId": "1",
+            "syncing": false,
+            "title": "(2) Men Marry for One Reason Only—It’s Not What You Think 🤯 Via: @taraboddie - YouTube",
+            "url": "https://www.youtube.com/shorts/Nu74r2Bmp7E"
+          }
+        ],
+        "dateAdded": 1745060949665,
+        "folderType": "bookmarks-bar",
+        "id": "1",
+        "index": 0,
+        "parentId": "0",
+        "syncing": false,
+        "title": "Bookmarks"
+      },
+      {
+        "children": [],
+        "dateAdded": 1745060949665,
+        "dateGroupModified": 1749913898541,
+        "folderType": "other",
+        "id": "2",
+        "index": 1,
+        "parentId": "0",
+        "syncing": false,
+        "title": "Other bookmarks"
+      }
+    ],
+    "dateAdded": 1749887672371,
+    "id": "0",
+    "syncing": false,
+    "title": ""
+  }
+]
