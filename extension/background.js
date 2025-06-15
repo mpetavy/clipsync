@@ -16,6 +16,12 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 // ##################################################################################################################
 
+async function isChrome() {
+    const rootTree = await chrome.bookmarks.getTree();
+
+    return rootTree[0].children[0].title === "Bookmarks bar"
+}
+
 async function backupBookmarks() {
     const rootTree = await chrome.bookmarks.getTree();
 
@@ -77,6 +83,16 @@ async function restoreBookmarks() {
 async function addBookmark(bookmark, parentId) {
     const {children, id, folderType, syncing, dateGroupModified, dateAdded, ...createDetails} = bookmark;
     if (parentId) createDetails.parentId = parentId;
+
+    if (await isChrome()) {
+        if (createDetails.title === "Bookmarks") {
+            createDetails.title = "Bookmarks bar"
+        }
+    } else {
+        if (createDetails.title === "Bookmarks bar") {
+            createDetails.title = "Bookmarks"
+        }
+    }
 
     if (!createDetails.title) {
         console.log('Skipping: title is empty');
