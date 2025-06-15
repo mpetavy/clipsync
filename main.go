@@ -1,10 +1,10 @@
 package main
 
 import (
+	"bytes"
 	"embed"
 	"github.com/mpetavy/common"
 	"github.com/rs/cors"
-	"io"
 	"net/http"
 	"os"
 	"strconv"
@@ -25,36 +25,27 @@ func init() {
 func restoreBookmarks(w http.ResponseWriter, r *http.Request) {
 	common.DebugFunc()
 
-	file, size, err := func() (io.ReadCloser, int64, error) {
+	ba, err := func() ([]byte, error) {
 		if !common.FileExists(BookmarkFile) {
-			return nil, 0, &common.ErrFileNotFound{
+			return nil, &common.ErrFileNotFound{
 				FileName: BookmarkFile,
 			}
 		}
 
-		size, err := common.FileSize(BookmarkFile)
+		ba, err := os.ReadFile(BookmarkFile)
 		if common.Error(err) {
-			return nil, 0, err
-		}
-
-		file, err := os.Open(BookmarkFile)
-		if common.Error(err) {
-			return nil, 0, err
+			return nil, err
 		}
 
 		w.Header().Set(common.CONTENT_TYPE, common.MimetypeApplicationJson.MimeType)
-		w.Header().Set(common.CONTENT_LENGTH, strconv.Itoa(int(size)))
+		w.Header().Set(common.CONTENT_LENGTH, strconv.Itoa(len(ba)))
 
-		return file, size, nil
+		return ba, nil
 	}()
 
 	switch err {
 	case nil:
-		defer func() {
-			common.Error(file.Close())
-		}()
-
-		common.Error(common.HTTPResponse(w, r, http.StatusOK, common.MimetypeApplicationJson.MimeType, int(size), file))
+		common.Error(common.HTTPResponse(w, r, http.StatusOK, common.MimetypeApplicationJson.MimeType, len(ba), bytes.NewReader(ba)))
 	default:
 		http.Error(w, err.Error(), http.StatusBadRequest)
 	}
@@ -64,20 +55,12 @@ func backupBookmarks(w http.ResponseWriter, r *http.Request) {
 	common.DebugFunc()
 
 	err := func() error {
-		file, err := os.OpenFile(BookmarkFile, os.O_RDWR|os.O_CREATE|os.O_TRUNC, common.DefaultFileMode)
+		ba, err := common.ReadBody(r.Body)
 		if common.Error(err) {
 			return err
 		}
 
-		defer func() {
-			common.Error(file.Close())
-		}()
-
-		_, err = io.Copy(file, r.Body)
-		defer func() {
-			common.Error(r.Body.Close())
-		}()
-
+		err = os.WriteFile(BookmarkFile, ba, common.DefaultFileMode)
 		if common.Error(err) {
 			return err
 		}
