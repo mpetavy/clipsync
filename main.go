@@ -22,7 +22,7 @@ func init() {
 	common.Init("", "", "", "", "", "", "", "", &resources, nil, nil, run, 0)
 }
 
-func getBookmarkHandler(w http.ResponseWriter, r *http.Request) {
+func restoreBookmarks(w http.ResponseWriter, r *http.Request) {
 	common.DebugFunc()
 
 	file, size, err := func() (io.ReadCloser, int64, error) {
@@ -60,31 +60,30 @@ func getBookmarkHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
-func setBookmarkHandler(w http.ResponseWriter, r *http.Request) {
+func backupBookmarks(w http.ResponseWriter, r *http.Request) {
 	common.DebugFunc()
 
-	var err error
-	//err := func() error {
-	//	file, err := os.OpenFile(BookmarkFile, os.O_RDWR|os.O_CREATE|os.O_TRUNC, common.DefaultFileMode)
-	//	if common.Error(err) {
-	//		return err
-	//	}
-	//
-	//	defer func() {
-	//		common.Error(file.Close())
-	//	}()
-	//
-	//	_, err = io.Copy(file, r.Body)
-	//	defer func() {
-	//		common.Error(r.Body.Close())
-	//	}()
-	//
-	//	if common.Error(err) {
-	//		return err
-	//	}
-	//
-	//	return nil
-	//}()
+	err := func() error {
+		file, err := os.OpenFile(BookmarkFile, os.O_RDWR|os.O_CREATE|os.O_TRUNC, common.DefaultFileMode)
+		if common.Error(err) {
+			return err
+		}
+
+		defer func() {
+			common.Error(file.Close())
+		}()
+
+		_, err = io.Copy(file, r.Body)
+		defer func() {
+			common.Error(r.Body.Close())
+		}()
+
+		if common.Error(err) {
+			return err
+		}
+
+		return nil
+	}()
 
 	switch err {
 	case nil:
@@ -96,8 +95,8 @@ func setBookmarkHandler(w http.ResponseWriter, r *http.Request) {
 
 func run() error {
 	mux := http.NewServeMux()
-	mux.HandleFunc("/get", getBookmarkHandler)
-	mux.HandleFunc("/set", setBookmarkHandler)
+	mux.HandleFunc("/restoreBookmarks", restoreBookmarks)
+	mux.HandleFunc("/backupBookmarks", backupBookmarks)
 
 	handler := cors.Default().Handler(mux)
 
