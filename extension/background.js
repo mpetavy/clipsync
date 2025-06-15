@@ -16,11 +16,21 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 // ##################################################################################################################
 
-async function isChrome() {
-    const rootTree = await chrome.bookmarks.getTree();
+let chromeDetectionResult = -1;
 
-    return rootTree[0].children[0].title === "Bookmarks bar"
+async function isChrome() {
+    if (chromeDetectionResult === -1) {
+        const rootTree = await chrome.bookmarks.getTree();
+        if (rootTree[0].children[0] && rootTree[0].children[0].title === "Bookmarks bar") {
+            chromeDetectionResult = 1;
+        } else {
+            chromeDetectionResult = 0;
+        }
+    }
+    return chromeDetectionResult === 1;
 }
+
+// ##################################################################################################################
 
 async function backupBookmarks() {
     const rootTree = await chrome.bookmarks.getTree();
@@ -62,6 +72,8 @@ async function clearBookmarks() {
 
     console.log("Existing bookmarks successfully removed.");
 }
+
+// ##################################################################################################################
 
 async function restoreBookmarks() {
     await clearBookmarks();
