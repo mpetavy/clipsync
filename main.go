@@ -54,19 +54,20 @@ func restoreBookmarks(w http.ResponseWriter, r *http.Request) {
 func backupBookmarks(w http.ResponseWriter, r *http.Request) {
 	common.DebugFunc()
 
-	err := func() error {
-		ba, err := common.ReadBody(r.Body)
-		if common.Error(err) {
-			return err
-		}
-
-		err = os.WriteFile(BookmarkFile, ba, common.DefaultFileMode)
-		if common.Error(err) {
-			return err
-		}
-
-		return nil
-	}()
+	var err error
+	//err := func() error {
+	//	ba, err := common.ReadBody(r.Body)
+	//	if common.Error(err) {
+	//		return err
+	//	}
+	//
+	//	err = os.WriteFile(BookmarkFile, ba, common.DefaultFileMode)
+	//	if common.Error(err) {
+	//		return err
+	//	}
+	//
+	//	return nil
+	//}()
 
 	switch err {
 	case nil:

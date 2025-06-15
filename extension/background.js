@@ -1,18 +1,52 @@
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     if (message.action === "sync") {
-        backupBookmarks().then(() => {
-            return restoreBookmarks();
-        }).then(() => {
-            console.log("Bookmarks synced!");
-            sendResponse({status: "success"});
-        }).catch(error => {
-            console.error("Sync failed:", error);
+        processBookmarks(sendResponse).catch(error => {
+            console.error("Bookmark processing failed:", error);
             sendResponse({status: "error", error: error.message});
         });
-
-        return true;
+        return true; // Indicates async response
     }
 });
+
+chrome.bookmarks.onCreated.addListener(() => {
+    processBookmarks().catch(error => {
+        console.error("Bookmark processing failed:", error);
+    });
+});
+
+chrome.bookmarks.onRemoved.addListener(() => {
+    processBookmarks().catch(error => {
+        console.error("Bookmark processing failed:", error);
+    });
+});
+
+let inProcessBookmarks = 0;
+
+async function processBookmarks(sendResponse) {
+    if (inProcessBookmarks === 1) {
+        return
+    }
+    try {
+        inProcessBookmarks = 1;
+
+        await backupBookmarks();
+        await restoreBookmarks();
+        console.log("Bookmarks synced!");
+        if (sendResponse) {
+            sendResponse({status: "success"});
+        }
+    } catch (error) {
+        inProcessBookmarks = 0;
+
+        console.error("Sync failed:", error);
+        if (sendResponse) {
+            sendResponse({status: "error", error: error.message});
+        }
+        throw error; // Re-throw for outer catch
+    }
+
+    inProcessBookmarks = 0;
+}
 
 // ##################################################################################################################
 
