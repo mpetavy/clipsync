@@ -8,17 +8,17 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     }
 });
 
-chrome.bookmarks.onCreated.addListener(() => {
-    processBookmarks().catch(error => {
-        console.error("Bookmark processing failed:", error);
-    });
-});
-
-chrome.bookmarks.onRemoved.addListener(() => {
-    processBookmarks().catch(error => {
-        console.error("Bookmark processing failed:", error);
-    });
-});
+// chrome.bookmarks.onCreated.addListener(() => {
+//     processBookmarks().catch(error => {
+//         console.error("Bookmark processing failed:", error);
+//     });
+// });
+//
+// chrome.bookmarks.onRemoved.addListener(() => {
+//     processBookmarks().catch(error => {
+//         console.error("Bookmark processing failed:", error);
+//     });
+// });
 
 let inProcessBookmarks = 0;
 
@@ -46,22 +46,6 @@ async function processBookmarks(sendResponse) {
     }
 
     inProcessBookmarks = 0;
-}
-
-// ##################################################################################################################
-
-let chromeDetectionResult = -1;
-
-async function isChrome() {
-    if (chromeDetectionResult === -1) {
-        const rootTree = await chrome.bookmarks.getTree();
-        if (rootTree[0].children[0] && rootTree[0].children[0].title === "Bookmarks bar") {
-            chromeDetectionResult = 1;
-        } else {
-            chromeDetectionResult = 0;
-        }
-    }
-    return chromeDetectionResult === 1;
 }
 
 // ##################################################################################################################
@@ -127,18 +111,8 @@ async function restoreBookmarks() {
 }
 
 async function addBookmark(bookmark, parentId) {
-    const {children, id, folderType, syncing, dateGroupModified, dateAdded, ...createDetails} = bookmark;
+    const {children, id, syncing, dateGroupModified, dateAdded, ...createDetails} = bookmark;
     if (parentId) createDetails.parentId = parentId;
-
-    if (await isChrome()) {
-        if (createDetails.title === "Bookmarks") {
-            createDetails.title = "Bookmarks bar"
-        }
-    } else {
-        if (createDetails.title === "Bookmarks bar") {
-            createDetails.title = "Bookmarks"
-        }
-    }
 
     if (!createDetails.title) {
         console.log('Skipping: title is empty');
@@ -147,9 +121,15 @@ async function addBookmark(bookmark, parentId) {
 
     if (!createDetails.url) {
         const childrenOfParent = await chrome.bookmarks.getChildren(parentId || createDetails.parentId);
-        const existingFolder = childrenOfParent.find(child =>
-            child.title === createDetails.title && !child.url
-        );
+
+        const existingFolder = createDetails.folderType ?
+            childrenOfParent.find(child =>
+                child.folderType === createDetails.folderType && !child.url
+            )
+            :
+            childrenOfParent.find(child =>
+                child.title === createDetails.title && !child.url
+            );
 
         const folderId = existingFolder ? existingFolder.id :
             (await chrome.bookmarks.create(createDetails)).id;
