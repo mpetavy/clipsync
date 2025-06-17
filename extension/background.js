@@ -91,6 +91,27 @@ async function clearBookmarks() {
     console.log("Existing bookmarks successfully removed.");
 }
 
+// chrome.storage.local.set({ url: "https://example.com", username: "myuser" }, () => {
+//     console.log("Data saved.");
+// });
+//
+// chrome.storage.sync.set({ url: "https://example.com", username: "myuser" }, () => {
+//     console.log("Data saved and synced.");
+// });
+//
+// chrome.storage.local.get(["url", "username"], (result) => {
+//     console.log("Saved URL:", result.url);
+//     console.log("Saved username:", result.username);
+// });
+//
+// chrome.storage.local.remove(["url"], () => {
+//     console.log("URL removed.");
+// });
+//
+// chrome.storage.local.clear(() => {
+//     console.log("All data cleared.");
+// });
+
 // ##################################################################################################################
 
 async function restoreBookmarks() {
