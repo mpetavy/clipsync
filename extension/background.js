@@ -1,8 +1,8 @@
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
+ chrome.runtime.onMessage.addListener((message, sender, chromeResponse) => {
     if (message.action === "sync") {
-        processBookmarks(sendResponse).catch(error => {
+        processBookmarks(message,chromeResponse).catch(error => {
             console.error("Bookmark processing failed:", error);
-            sendResponse({status: "error", error: error.message});
+            chromeResponse({status: "error", error: error.message});
         });
         return true; // Indicates async response
     }
@@ -22,15 +22,15 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
 
 let inProcessBookmarks = 0;
 
-async function processBookmarks(sendResponse) {
+async function processBookmarks(message,sendResponse) {
     if (inProcessBookmarks === 1) {
         return
     }
     try {
         inProcessBookmarks = 1;
 
-        await backupBookmarks();
-        await restoreBookmarks();
+        await backupBookmarks(message);
+        await restoreBookmarks(message);
         console.log("Bookmarks synced!");
         if (sendResponse) {
             sendResponse({status: "success"});
@@ -50,12 +50,12 @@ async function processBookmarks(sendResponse) {
 
 // ##################################################################################################################
 
-async function backupBookmarks() {
+async function backupBookmarks(message) {
     const rootTree = await chrome.bookmarks.getTree();
 
     const jsonString = JSON.stringify(rootTree, null, 2);
 
-    const response = await fetch("http://localhost:8080/backupBookmarks", {
+    const response = await fetch(message.serverUrl + "/backupBookmarks", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -114,10 +114,10 @@ async function clearBookmarks() {
 
 // ##################################################################################################################
 
-async function restoreBookmarks() {
+async function restoreBookmarks(message) {
     await clearBookmarks();
 
-    const response = await fetch("http://localhost:8080/restoreBookmarks");
+    const response = await fetch(message.serverUrl + "/restoreBookmarks");
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
     }
