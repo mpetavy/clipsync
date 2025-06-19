@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title>Bookmark Sync</title>
   <style>
@@ -21,31 +21,37 @@
     fieldset {
       border: 1px solid #ddd;
       border-radius: 4px;
-      margin-bottom: 4px;  /* reduced from 8px */
+      margin-bottom: 4px;
       padding: 8px;
+      width: 350px;
     }
     legend {
       padding: 0 8px;
       font-weight: bold;
     }
     .form-group {
-      margin-bottom: 4px;  /* reduced from 8px */
-      display: flex;
-      align-items: center;
+      margin-bottom: 4px;
     }
     .form-group label {
-      flex: 0 0 120px;
-      margin-right: 8px;
-      text-align: right;
+      display: block;
+      margin-bottom: 2px;
+      font-weight: bold;
     }
     .form-group input {
-      flex: 1;
+      display: block;
+      width: 100%;
       padding: 8px;
       border: 1px solid #ccc;
       border-radius: 4px;
+      box-sizing: border-box;
     }
     button#sync {
-      margin-top: 4px;  /* reduced from 8px */
+      margin-top: 4px;
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background: #f9f9f9;
     }
   </style>
 </head>
@@ -58,10 +64,18 @@
   </div>
   <div class="form-group">
     <label for="server-password">Password:</label>
-    <input type="password" id="server-password" name="server-password" placeholder="Enter password">
+    <input
+            type="password"
+            id="server-password"
+            name="server-password"
+            placeholder="Enter password"
+            minlength="8"
+            required
+    >
   </div>
 </fieldset>
 <button id="sync">Sync bookmarks</button>
+<div id="footnote" style="text-align: right; font-size: 0.8em; margin-top: 12px; color: #666;"></div>
 <script src="popup.js"></script>
 </body>
 </html>

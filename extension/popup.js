@@ -1,3 +1,11 @@
+function updateFootnote() {
+// Get the manifest data
+  const manifest = chrome.runtime.getManifest();
+// Format the footnote text
+  const footnote = document.getElementById('footnote');
+  footnote.textContent = `${manifest.name} ${manifest.version}`;
+}
+
 function applyTheme() {
   if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
     document.body.classList.add('dark');
@@ -8,7 +16,7 @@ function applyTheme() {
   }
 }
 
-// Initial check
+updateFootnote();
 applyTheme();
 
 // Listen for changes
