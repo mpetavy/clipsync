@@ -71,7 +71,10 @@ document.getElementById("sync").addEventListener("click", () => {
         new URL(serverUrl);
 
         fetch(serverUrl + "/restoreBookmarks").then(response => {
-        })
+            // Handle the fetch response if needed
+        }).catch(error => {
+            console.error("Fetch error:", error);
+        });
     } catch (e) {
         showError("Please enter a valid URL! (" + e.message + ")");
         return;
@@ -79,7 +82,7 @@ document.getElementById("sync").addEventListener("click", () => {
 
     if (!serverPassword || serverPassword.length < 8) {
         showError("Please enter a valid password!");
-        return
+        return;
     }
 
     chrome.runtime.sendMessage({
