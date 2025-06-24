@@ -38,7 +38,7 @@ func (server *Server) getSyncHandler(w http.ResponseWriter, r *http.Request) {
 
 	var err error
 	bm, err := func() (*Bookmark, error) {
-		bm, err := server.CrudSync.Repository.Find(fmt.Sprintf("%s='%s'", BookmarkSchema.Email, "dummy"))
+		bm, err := server.CrudSync.Repository.Find(NewWhereTerm().Where(WhereItem{BookmarkSchema.Email, "=", "dummy"}))
 		if common.Error(err) {
 			return nil, err
 		}

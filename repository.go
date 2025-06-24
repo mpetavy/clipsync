@@ -49,12 +49,14 @@ func (repository *Repository[T]) FindById(id int) (*T, error) {
 	return &record, nil
 }
 
-func (repository *Repository[T]) Find(where string) (*T, error) {
+func (repository *Repository[T]) Find(where *WhereTerm) (*T, error) {
 	common.DebugFunc()
 
 	var record T
 
-	tx := repository.Database.Gorm.Where(where).First(&record)
+	w, v := where.Build()
+
+	tx := repository.Database.Gorm.Where(w, v...).First(&record)
 	if tx.Error != nil && strings.Contains(tx.Error.Error(), "not found") {
 		return nil, ErrNotFound
 	}
