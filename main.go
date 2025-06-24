@@ -8,11 +8,6 @@ import (
 //go:embed go.mod
 var resources embed.FS
 
-const (
-	//BookmarkFile = "bookmarks_3_24_25.html"
-	BookmarkFile = "testdata/bookmarks.json"
-)
-
 func init() {
 	common.Init("", "", "", "", "Syncs bookmarks", "", "", "", &resources, start, stop, nil, 0)
 }

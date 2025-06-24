@@ -25,7 +25,7 @@ func address() string {
 }
 
 func TestBookmarks(t *testing.T) {
-	r, ba, err := common.HTTPRequest(nil, common.MillisecondToDuration(*common.FlagHTTPTimeout), GetBookmarks.Method, GetBookmarks.URL(address()), nil, nil, *httpUsername, *httpPassword, nil, http.StatusOK)
+	r, ba, err := common.HTTPRequest(nil, common.MillisecondToDuration(*common.FlagHTTPTimeout), GetSync.Method, GetSync.URL(address()), nil, nil, *httpUsername, *httpPassword, nil, http.StatusOK)
 
 	fmt.Printf("%s\n", ba)
 

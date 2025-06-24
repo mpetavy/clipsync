@@ -6,51 +6,55 @@ import (
 	"fmt"
 	"github.com/mpetavy/common"
 	"net/http"
-	"os"
+	"strings"
 	"time"
 )
 
 const (
 	API_ENDPOINT   = "/api/v1"
+	REST_SYNC      = API_ENDPOINT + "/sync"
 	REST_BOOKMARKS = API_ENDPOINT + "/bookmarks"
+	REST_LOGS      = API_ENDPOINT + "/logs"
 	REST_STATUS    = API_ENDPOINT + "/status"
 )
 
 var (
 	ErrBasicAuth = fmt.Errorf("BasicAuth failed")
 
-	GetBookmarks = common.NewRestURL(http.MethodGet, REST_BOOKMARKS)
-	PutBookmarks = common.NewRestURL(http.MethodPut, REST_BOOKMARKS)
-	GetStatus    = common.NewRestURL(http.MethodGet, REST_STATUS)
+	HeadSync  = common.NewRestURL(http.MethodHead, REST_SYNC)
+	GetSync   = common.NewRestURL(http.MethodGet, REST_SYNC)
+	PutSync   = common.NewRestURL(http.MethodPut, REST_SYNC)
+	GetStatus = common.NewRestURL(http.MethodGet, REST_STATUS)
 )
 
-func (server *Server) getBookmarksHandler(w http.ResponseWriter, r *http.Request) {
+func (server *Server) headSyncHandler(w http.ResponseWriter, r *http.Request) {
 	common.DebugFunc()
 
-	ba, err := func() ([]byte, error) {
-		if !common.FileExists(BookmarkFile) {
-			return nil, &common.ErrFileNotFound{
-				FileName: BookmarkFile,
-			}
-		}
+	common.Error(common.HTTPResponse(w, r, http.StatusOK, "", 0, nil))
+}
 
-		ba, err := os.ReadFile(BookmarkFile)
+func (server *Server) getSyncHandler(w http.ResponseWriter, r *http.Request) {
+	common.DebugFunc()
+
+	var err error
+	bm, err := func() (*Bookmark, error) {
+		bm, err := server.CrudSync.Repository.Find(fmt.Sprintf("%s='%s'", BookmarkSchema.Email, "dummy"))
 		if common.Error(err) {
 			return nil, err
 		}
 
-		return ba, nil
+		return bm, nil
 	}()
 
 	switch err {
 	case nil:
-		common.Error(common.HTTPResponse(w, r, http.StatusOK, common.MimetypeApplicationJson.MimeType, len(ba), bytes.NewReader(ba)))
+		common.Error(common.HTTPResponse(w, r, http.StatusOK, common.MimetypeApplicationJson.MimeType, len(bm.Payload.String()), strings.NewReader(bm.Payload.String())))
 	default:
 		http.Error(w, err.Error(), http.StatusBadRequest)
 	}
 }
 
-func (server *Server) putBookmarksHandler(w http.ResponseWriter, r *http.Request) {
+func (server *Server) putSyncHandler(w http.ResponseWriter, r *http.Request) {
 	common.DebugFunc()
 
 	var err error
@@ -60,7 +64,15 @@ func (server *Server) putBookmarksHandler(w http.ResponseWriter, r *http.Request
 	//		return err
 	//	}
 	//
-	//	err = os.WriteFile(BookmarkFile, ba, common.DefaultFileMode)
+	//	bm, err := NewBookmark()
+	//	if common.Error(err) {
+	//		return err
+	//	}
+	//
+	//	bm.Email.SetString("dummy")
+	//	bm.Payload.SetString(string(ba))
+	//
+	//	err = server.CrudSync.Repository.Save([]Bookmark{*bm})
 	//	if common.Error(err) {
 	//		return err
 	//	}

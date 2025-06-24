@@ -70,7 +70,9 @@ document.getElementById("sync").addEventListener("click", () => {
     try {
         new URL(serverUrl);
 
-        fetch(serverUrl + "/bookmarks").then(response => {
+        fetch(serverUrl + "/sync",{
+            method: "HEAD",
+        }).then(response => {
             // Handle the fetch response if needed
         }).catch(error => {
             console.error("Fetch error:", error);

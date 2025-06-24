@@ -29,16 +29,19 @@ var (
 	server *Server
 )
 
-type MuxHandlerFunc func(pattern string, description string, needsAuth bool, handler http.HandlerFunc)
+type MuxHandlerFunc func(restURL *common.RestURL, description string, needsAuth bool, handler http.HandlerFunc)
 
 type Server struct {
 	MuxHandlerFunc
-	Cfg                *ClipsyncCfg
-	Mux                *http.ServeMux
-	Database           *Database
-	Endpoints          *common.StringTable
-	EndpointDetails    *common.StringTable
-	RotatePasswordTask *common.BackgroundTask
+	Cfg             *ClipsyncCfg
+	Mux             *http.ServeMux
+	Database        *Database
+	Endpoints       *common.StringTable
+	EndpointDetails *common.StringTable
+	Bookmarks       *Repository[Bookmark]
+	Logs            *Repository[Log]
+	CrudSync        *CRUD[Bookmark]
+	CrudLogs        *CRUD[Log]
 }
 
 type ServerHealth struct {
@@ -87,12 +90,7 @@ func BasicAuth(r *http.Request, username, password string) error {
 			return ErrBasicAuth
 		}
 
-		err = common.CompareHashes(serverPassword, password)
-		if err == nil {
-			return nil
-		}
-
-		return nil
+		return common.CompareHashes(serverPassword, password)
 	}()
 	if err != nil {
 		common.Sleep(time.Second * 5)
@@ -124,14 +122,15 @@ func NewServer() error {
 
 	// Database
 
-	server.HandlerFunc(GetBookmarks, "Get bookmarks", true, common.ConcurrentLimitHandler(common.BasicAuthHandler(true, BasicAuth, common.TelemetryHandler(server.getBookmarksHandler))))
-	server.HandlerFunc(PutBookmarks, "Put bookmarks status", true, common.ConcurrentLimitHandler(common.BasicAuthHandler(true, BasicAuth, common.TelemetryHandler(server.putBookmarksHandler))))
+	server.HandlerFunc(HeadSync, "Head sync", true, common.ConcurrentLimitHandler(common.BasicAuthHandler(true, BasicAuth, common.TelemetryHandler(server.headSyncHandler))))
+	server.HandlerFunc(GetSync, "Get sync", true, common.ConcurrentLimitHandler(common.BasicAuthHandler(true, BasicAuth, common.TelemetryHandler(server.getSyncHandler))))
+	server.HandlerFunc(PutSync, "Put sync status", true, common.ConcurrentLimitHandler(common.BasicAuthHandler(true, BasicAuth, common.TelemetryHandler(server.putSyncHandler))))
 	server.HandlerFunc(GetStatus, "Get status", true, common.ConcurrentLimitHandler(common.BasicAuthHandler(true, BasicAuth, common.TelemetryHandler(server.getStatusHandler))))
 
 	server.EndpointDetails = common.NewStringTable()
 	server.EndpointDetails.AddCols("Path", "Param", "Mandatory", "Description", "Default")
 
-	for _, restURL := range []*common.RestURL{GetBookmarks, PutBookmarks, GetStatus} {
+	for _, restURL := range []*common.RestURL{GetSync, PutSync, GetStatus} {
 		for _, param := range restURL.Params {
 			server.EndpointDetails.AddCols(restURL.Endpoint, param.Name, strconv.FormatBool(param.Mandatory), param.Description, param.Default)
 		}
@@ -142,6 +141,26 @@ func NewServer() error {
 	var err error
 
 	server.Database, err = NewDatabase()
+	if common.Error(err) {
+		return err
+	}
+
+	server.Bookmarks, err = NewRepository[Bookmark](server.Database)
+	if common.Error(err) {
+		return err
+	}
+
+	server.CrudSync, err = NewCrud[Bookmark](server.HandlerFunc, server.Bookmarks, BasicAuth, REST_BOOKMARKS)
+	if common.Error(err) {
+		return err
+	}
+
+	server.Logs, err = NewRepository[Log](server.Database)
+	if common.Error(err) {
+		return err
+	}
+
+	server.CrudLogs, err = NewCrud[Log](server.HandlerFunc, server.Logs, BasicAuth, REST_LOGS)
 	if common.Error(err) {
 		return err
 	}
@@ -193,10 +212,6 @@ func (server *Server) Start() error {
 func (server *Server) Stop() {
 	common.DebugFunc()
 
-	if server.RotatePasswordTask != nil {
-		server.RotatePasswordTask.Stop(true)
-	}
-
 	common.Error(server.Database.Close())
 	common.Error(common.HTTPServerStop())
 }
@@ -246,7 +261,7 @@ func (server *Server) status() (*ServerStatus, error) {
 
 	// RestStats
 
-	for _, restURL := range []*common.RestURL{GetBookmarks, PutBookmarks, GetStatus} {
+	for _, restURL := range []*common.RestURL{GetSync, PutSync, GetStatus} {
 		serverStatus.RestStats.Set(strings.ReplaceAll(restURL.MuxString(), " ", ":"), restURL.Statistics())
 	}
 
