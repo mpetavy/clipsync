@@ -100,6 +100,8 @@ document.getElementById("sync").addEventListener("click", () => {
             console.error("Error sending message:", chrome.runtime.lastError);
         } else if (response && response.status === "success") {
             console.log("Sync triggered successfully.");
+
+            window.close();
         }
     });
 });

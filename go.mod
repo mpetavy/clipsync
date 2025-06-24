@@ -6,6 +6,7 @@ require (
 	github.com/fatih/structtag v1.2.0
 	github.com/mpetavy/common v1.10.34
 	github.com/pbnjay/memory v0.0.0-20210728143218-7b4eea64cf58
+	github.com/spyzhov/ajson v0.9.6
 	github.com/stretchr/testify v1.10.0
 	github.com/wk8/go-ordered-map/v2 v2.1.8
 	gorm.io/driver/sqlite v1.6.0

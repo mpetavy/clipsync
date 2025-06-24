@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/mpetavy/common"
+	"github.com/spyzhov/ajson"
 	"net/http"
 	"strings"
 	"time"
@@ -27,6 +28,38 @@ var (
 	GetStatus = common.NewRestURL(http.MethodGet, REST_STATUS)
 )
 
+const (
+	PARAM_USERNAME = "username"
+	PARAM_PASSWORD = "password"
+)
+
+func init() {
+	GetSync.Params = append(GetSync.Params, common.RestURLField{
+		Name:        PARAM_USERNAME,
+		Description: "Username",
+		Default:     "",
+		Mandatory:   true,
+	})
+	GetSync.Params = append(GetSync.Params, common.RestURLField{
+		Name:        PARAM_PASSWORD,
+		Description: "Password",
+		Default:     "",
+		Mandatory:   true,
+	})
+	PutSync.Params = append(PutSync.Params, common.RestURLField{
+		Name:        PARAM_USERNAME,
+		Description: "Username",
+		Default:     "",
+		Mandatory:   true,
+	})
+	PutSync.Params = append(PutSync.Params, common.RestURLField{
+		Name:        PARAM_PASSWORD,
+		Description: "Password",
+		Default:     "",
+		Mandatory:   true,
+	})
+}
+
 func (server *Server) headSyncHandler(w http.ResponseWriter, r *http.Request) {
 	common.DebugFunc()
 
@@ -38,7 +71,14 @@ func (server *Server) getSyncHandler(w http.ResponseWriter, r *http.Request) {
 
 	var err error
 	bm, err := func() (*Bookmark, error) {
-		bm, err := server.CrudSync.Repository.Find(NewWhereTerm().Where(WhereItem{BookmarkSchema.Email, "=", "dummy"}))
+		err := GetSync.Validate(r)
+		if common.Error(err) {
+			return nil, err
+		}
+
+		username := r.Header.Get(PARAM_USERNAME)
+
+		bm, err := server.CrudBookmarks.Repository.Find(NewWhereTerm().Where(WhereItem{BookmarkSchema.Username, "=", username}))
 		if common.Error(err) {
 			return nil, err
 		}
@@ -57,28 +97,57 @@ func (server *Server) getSyncHandler(w http.ResponseWriter, r *http.Request) {
 func (server *Server) putSyncHandler(w http.ResponseWriter, r *http.Request) {
 	common.DebugFunc()
 
-	var err error
-	//err := func() error {
-	//	ba, err := common.ReadBody(r.Body)
-	//	if common.Error(err) {
-	//		return err
-	//	}
-	//
-	//	bm, err := NewBookmark()
-	//	if common.Error(err) {
-	//		return err
-	//	}
-	//
-	//	bm.Email.SetString("dummy")
-	//	bm.Payload.SetString(string(ba))
-	//
-	//	err = server.CrudSync.Repository.Save([]Bookmark{*bm})
-	//	if common.Error(err) {
-	//		return err
-	//	}
-	//
-	//	return nil
-	//}()
+	err := server.Database.RunSynchronized(func() error {
+		err := PutSync.Validate(r)
+		if common.Error(err) {
+			return err
+		}
+
+		username := r.Header.Get(PARAM_USERNAME)
+		password := r.Header.Get(PARAM_PASSWORD)
+
+		ba, err := common.ReadBody(r.Body)
+		if common.Error(err) {
+			return err
+		}
+
+		r, err := ajson.JSONPath(ba, "$..dateAdded")
+		if err != nil {
+			return err
+		}
+
+		if len(r) == 3 {
+			common.Info("Do not save empty bookmark list")
+
+			return nil
+		}
+
+		bm, err := server.CrudBookmarks.Repository.Find(NewWhereTerm().Where(WhereItem{BookmarkSchema.Username, "=", username}))
+		switch err {
+		case nil:
+		case ErrNotFound:
+			bm, err = NewBookmark()
+			if common.Error(err) {
+				return err
+			}
+		default:
+			if common.Error(err) {
+				return err
+			}
+
+		}
+
+		bm.Username.SetString(username)
+		bm.Password.SetString(password)
+		bm.Payload.SetString(string(ba))
+
+		err = server.CrudBookmarks.Repository.Save(bm)
+		if common.Error(err) {
+			return err
+		}
+
+		return nil
+	})
 
 	switch err {
 	case nil:

@@ -104,7 +104,7 @@ func (crud *CRUD[T]) PostHandler(w http.ResponseWriter, r *http.Request) {
 			return nil, err
 		}
 
-		err = crud.Repository.Save(records)
+		err = crud.Repository.SaveAll(records)
 		if common.Error(err) {
 			return nil, err
 		}

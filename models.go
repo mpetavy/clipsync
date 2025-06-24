@@ -11,7 +11,7 @@ type Bookmark struct {
 	ID        sqldb.FieldInt64  `json:"id" desc:"Unique database ID"`
 	CreatedAt sqldb.FieldTime   `json:"createdAt" gorm:"index" desc:"Timestamp this DB record has been created"`
 	UpdatedAt sqldb.FieldTime   `json:"updatedAt" gorm:"index" desc:"Timestamp this DB record has been updated the last time"`
-	Email     sqldb.FieldString `json:"email" gorm:"index" desc:"Email"`
+	Username  sqldb.FieldString `json:"username" gorm:"index" desc:"Username"`
 	Password  sqldb.FieldString `json:"password" gorm:"index" desc:"Password"`
 	Payload   sqldb.FieldString `json:"payload" gorm:"index" desc:"Payload"`
 }
@@ -21,7 +21,7 @@ var BookmarkSchema = struct {
 	ID        string
 	CreatedAt string
 	UpdatedAt string
-	Email     string
+	Username  string
 	Password  string
 	Payload   string
 }{}

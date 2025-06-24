@@ -40,7 +40,7 @@ type Server struct {
 	EndpointDetails *common.StringTable
 	Bookmarks       *Repository[Bookmark]
 	Logs            *Repository[Log]
-	CrudSync        *CRUD[Bookmark]
+	CrudBookmarks   *CRUD[Bookmark]
 	CrudLogs        *CRUD[Log]
 }
 
@@ -150,7 +150,7 @@ func NewServer() error {
 		return err
 	}
 
-	server.CrudSync, err = NewCrud[Bookmark](server.HandlerFunc, server.Bookmarks, BasicAuth, REST_BOOKMARKS)
+	server.CrudBookmarks, err = NewCrud[Bookmark](server.HandlerFunc, server.Bookmarks, BasicAuth, REST_BOOKMARKS)
 	if common.Error(err) {
 		return err
 	}

@@ -2,6 +2,7 @@ package main
 
 import (
 	"github.com/mpetavy/common"
+	"gorm.io/gorm"
 	"strings"
 )
 
@@ -17,16 +18,38 @@ func NewRepository[T any](connection *Database) (*Repository[T], error) {
 	}, nil
 }
 
-func (repository *Repository[T]) Save(records []T) error {
+func (repository *Repository[T]) Save(record *T) error {
 	common.DebugFunc()
 
-	tx := repository.Database.Gorm.Create(records)
+	tx := repository.Database.Gorm.Save(record)
 	if IsDuplicateKeyError(tx.Error) {
 		return ErrDuplicateFound
 	}
 
 	if common.Error(tx.Error) {
 		return tx.Error
+	}
+
+	return nil
+}
+
+func (repository *Repository[T]) SaveAll(records []T) error {
+	common.DebugFunc()
+
+	err := repository.Database.Gorm.Transaction(func(tx *gorm.DB) error {
+		tx = tx.Save(records)
+		if IsDuplicateKeyError(tx.Error) {
+			return ErrDuplicateFound
+		}
+
+		if common.Error(tx.Error) {
+			return tx.Error
+		}
+
+		return nil
+	})
+	if common.Error(err) {
+		return err
 	}
 
 	return nil

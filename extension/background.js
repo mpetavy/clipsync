@@ -58,7 +58,9 @@ async function backupBookmarks(message) {
     const response = await fetch(message.serverUrl + "/sync", {
         method: "PUT",
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "username": message.serverUsername,
+            "password": message.serverPassword,
         },
         body: jsonString
     });
@@ -117,10 +119,12 @@ async function clearBookmarks() {
 async function restoreBookmarks(message) {
     await clearBookmarks();
 
-    const response = await fetch(message.serverUrl + "/sync");
-    if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-    }
+    const response = await fetch(message.serverUrl + "/sync", {
+        headers: {
+            "username": message.serverUsername,
+            "password": message.serverPassword,
+        },
+    });
 
     let bookmarks = await response.json();
 
