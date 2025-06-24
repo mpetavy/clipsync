@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "BookmarkSync",
+  "name": "Clipsync",
   "version": "1.0",
-  "description": "Syncs bookmarks from a remote server.",
+  "description": "Syncs bookmarks",
   "permissions": ["bookmarks", "storage", "alarms"],
   "host_permissions": ["http://*", "https://*"],
   "background": {

@@ -55,8 +55,8 @@ async function backupBookmarks(message) {
 
     const jsonString = JSON.stringify(rootTree, null, 2);
 
-    const response = await fetch(message.serverUrl + "/backupBookmarks", {
-        method: "POST",
+    const response = await fetch(message.serverUrl + "/bookmarks", {
+        method: "PUT",
         headers: {
             "Content-Type": "application/json"
         },
@@ -117,7 +117,7 @@ async function clearBookmarks() {
 async function restoreBookmarks(message) {
     await clearBookmarks();
 
-    const response = await fetch(message.serverUrl + "/restoreBookmarks");
+    const response = await fetch(message.serverUrl + "/bookmarks");
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
     }
