@@ -46,9 +46,11 @@ function updateSettings() {
         console.log('data: ', data);
 
         const serverUrl = document.getElementById("server-url");
+        const serverUsername = document.getElementById("server-username");
         const serverPassword = document.getElementById("server-password");
 
         if (data.serverUrl) serverUrl.value = data.serverUrl;
+        if (data.serverUsername) serverUsername.value = data.serverUsername;
         if (data.serverPassword) serverPassword.value = data.serverPassword;
     }).catch(error => {
         console.error('Error loading data:', error);
@@ -63,9 +65,10 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', upd
 
 document.getElementById("sync").addEventListener("click", () => {
     const serverUrl = document.getElementById("server-url").value;
+    const serverUsername = document.getElementById("server-username").value;
     const serverPassword = document.getElementById("server-password").value;
 
-    saveData({"serverUrl": serverUrl, "serverPassword": serverPassword});
+    saveData({"serverUrl": serverUrl, "serverUsername": serverUsername, "serverPassword": serverPassword});
 
     try {
         new URL(serverUrl);
@@ -90,6 +93,7 @@ document.getElementById("sync").addEventListener("click", () => {
     chrome.runtime.sendMessage({
         action: "sync",
         serverUrl: serverUrl,
+        serverUsername: serverUsername,
         serverPassword: serverPassword
     }, (response) => {
         if (chrome.runtime.lastError) {
