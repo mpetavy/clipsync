@@ -57,23 +57,39 @@ function updateSettings() {
     });
 }
 
+async function sha256(message) {
+    // Encode the message as UTF-8
+    const encoder = new TextEncoder();
+    const data = encoder.encode(message);
+    // Hash the data
+    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+    // Convert to hex string
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+    return hashHex;
+}
+
 updateFootnote();
 updateTheme();
 updateSettings();
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
 
-document.getElementById("sync").addEventListener("click", () => {
+document.getElementById("sync").addEventListener("click", async () => {
     const serverUrl = document.getElementById("server-url").value;
     const serverUsername = document.getElementById("server-username").value;
     const serverPassword = document.getElementById("server-password").value;
 
-    saveData({"serverUrl": serverUrl, "serverUsername": serverUsername, "serverPassword": serverPassword});
+    saveData({
+        "serverUrl": serverUrl,
+        "serverUsername": serverUsername,
+        "serverPassword": serverPassword
+    });
 
     try {
         new URL(serverUrl);
 
-        fetch(serverUrl + "/sync",{
+        fetch(serverUrl + "/sync", {
             method: "HEAD",
         }).then(response => {
             // Handle the fetch response if needed
@@ -90,17 +106,19 @@ document.getElementById("sync").addEventListener("click", () => {
         return;
     }
 
+    const encUsername = await sha256(serverUsername);
+    const encPassword = await sha256(serverPassword);
+
     chrome.runtime.sendMessage({
         action: "sync",
         serverUrl: serverUrl,
-        serverUsername: serverUsername,
-        serverPassword: serverPassword
+        serverUsername: encUsername,
+        serverPassword: encPassword
     }, (response) => {
         if (chrome.runtime.lastError) {
             console.error("Error sending message:", chrome.runtime.lastError);
         } else if (response && response.status === "success") {
             console.log("Sync triggered successfully.");
-
             window.close();
         }
     });
