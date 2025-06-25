@@ -24,16 +24,20 @@ function showError(text) {
     }, 2000)
 }
 
-function saveData(storageObj) {
+function saveSettings(storageObj) {
+    console.log('saveSettings');
+
     chrome.storage.local.set(storageObj, function () {
-        console.log('All data saved');
+        console.log('settings saved');
     });
 }
 
-function loadData() {
+function loadSettings() {
+    console.log('loadSettings');
+
     return new Promise((resolve) => {
         chrome.storage.local.get(null, function (result) {
-            console.log('All stored data:', result);
+            console.log('settings loaded');
             resolve(result);
         });
     });
@@ -42,9 +46,7 @@ function loadData() {
 function updateSettings() {
     console.log('updateSettings');
 
-    loadData().then(data => {
-        console.log('data: ', data);
-
+    loadSettings().then(data => {
         const serverUrl = document.getElementById("server-url");
         const serverUsername = document.getElementById("server-username");
         const serverPassword = document.getElementById("server-password");
@@ -80,7 +82,7 @@ document.getElementById("sync").addEventListener("click", async () => {
     const serverUsername = document.getElementById("server-username").value;
     const serverPassword = document.getElementById("server-password").value;
 
-    saveData({
+    saveSettings({
         "serverUrl": serverUrl,
         "serverUsername": serverUsername,
         "serverPassword": serverPassword
