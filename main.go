@@ -8,6 +8,9 @@ import (
 //go:embed go.mod
 var resources embed.FS
 
+//TODO AES encrypt bookmarks
+//TODO REST endpoint to reset password with TOD key
+
 func init() {
 	common.Init("", "", "", "", "Syncs bookmarks", "", "", "", &resources, start, stop, nil, 0)
 }

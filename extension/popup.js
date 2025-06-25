@@ -1,8 +1,8 @@
-function updateFootnote() {
+function updateLegend() {
     const manifest = chrome.runtime.getManifest();
 
-    const footnote = document.getElementById('footnote');
-    footnote.textContent = `${manifest.name} ${manifest.version}`;
+    const legend = document.getElementById('legend');
+    legend.textContent = `${manifest.name} ${manifest.version}`;
 }
 
 function updateTheme() {
@@ -69,7 +69,7 @@ async function sha256(message) {
     return hashHex;
 }
 
-updateFootnote();
+updateLegend();
 updateTheme();
 updateSettings();
 
