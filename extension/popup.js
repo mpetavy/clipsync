@@ -1,8 +1,17 @@
+serverHasAlreadyBookmarks = false;
+pluginInitialized = false;
+
+elementLegend = document.getElementById('legend');
+elementUrl = document.getElementById("clipsync-url");
+elementUsername = document.getElementById("clipsync-username");
+elementPassword = document.getElementById("clipsync-password");
+elementButtonSync = document.getElementById("sync")
+elementButtonReset = document.getElementById("reset")
+
 function updateLegend() {
     const manifest = chrome.runtime.getManifest();
 
-    const legend = document.getElementById('legend');
-    legend.textContent = `${manifest.name} ${manifest.version}`;
+    elementLegend.textContent = `${manifest.name} ${manifest.version}`;
 }
 
 function updateTheme() {
@@ -56,27 +65,23 @@ function deleteSettings() {
 function refreshSettings() {
     console.log('refreshSettings');
 
-    const url = document.getElementById("clipsync-url");
-    const username = document.getElementById("clipsync-username");
-    const password = document.getElementById("clipsync-password");
-
-    url.value = "http://localhost:8443";
-    username.value = "petavy@gmx.net";
-    password.value = "11111111";
+    elementUrl.value = "http://localhost:8443";
+    elementUsername.value = "petavy@gmx.net";
+    elementPassword.value = "11111111";
 
     pluginInitialized = false;
 
     loadSettings().then(data => {
-        if (data.url) url.value = data.url;
-        if (data.username) username.value = data.username;
-        if (data.password) password.value = data.password;
+        if (data.url) elementUrl.value = data.url;
+        if (data.username) elementUsername.value = data.username;
+        if (data.password) elementPassword.value = data.password;
 
         pluginInitialized = data.pluginInitialized;
     }).catch(error => {
         console.error('Error loading data:', error);
     });
 
-    url.focus();
+    elementUrl.focus();
 }
 
 async function sha256(message) {
@@ -96,15 +101,12 @@ updateTheme();
 
 refreshSettings();
 
-serverHasAlreadyBookmarks = false;
-pluginInitialized = false;
-
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
 
-document.getElementById("sync").addEventListener("click", async () => {
-    const url = document.getElementById("clipsync-url").value;
-    const username = document.getElementById("clipsync-username").value;
-    const password = document.getElementById("clipsync-password").value;
+elementButtonSync.addEventListener("click", async () => {
+    const url = elementUrl.value;
+    const username = elementUsername.value;
+    const password = elementPassword.value;
 
     saveSettings({
         "url": url,
@@ -126,7 +128,7 @@ document.getElementById("sync").addEventListener("click", async () => {
             },
         });
 
-        serverHasAlreadyBookmarks = response.status === 200 ? true : false;
+        serverHasAlreadyBookmarks = response.status === 200;
     } catch (e) {
         showError("Please enter a valid URL! (" + e + ")");
         return;
@@ -156,7 +158,7 @@ document.getElementById("sync").addEventListener("click", async () => {
     });
 });
 
-document.getElementById("reset").addEventListener("click", async () => {
+elementButtonReset.addEventListener("click", async () => {
     deleteSettings();
 
     refreshSettings();
