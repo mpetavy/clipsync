@@ -90,7 +90,7 @@ func (server *Server) getSyncHandler(w http.ResponseWriter, r *http.Request) {
 	case nil:
 		common.Error(common.HTTPResponse(w, r, http.StatusOK, common.MimetypeApplicationJson.MimeType, len(bm.Payload.String()), strings.NewReader(bm.Payload.String())))
 	default:
-		http.Error(w, err.Error(), http.StatusBadRequest)
+		http.Error(w, err.Error(), http.StatusNoContent)
 	}
 }
 

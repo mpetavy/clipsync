@@ -36,7 +36,7 @@
       border: 1px solid #ccc;
       border-radius: 4px;
     }
-    button#sync {
+    button {
       margin-top: 4px;
       height: 24px;
     }
@@ -46,22 +46,23 @@
 <fieldset>
   <legend id="legend">Server connection</legend>
   <div class="form-group">
-    <label for="server-url">Server URL:</label>
-    <input type="url" id="server-url" name="server-url" placeholder="https://example.com">
+    <label for="clipsync-url">Server URL:</label>
+    <input type="url" id="clipsync-url" name="clipsync-url" placeholder="https://example.com">
   </div>
   <div class="form-group">
-    <label for="server-username">Email:</label>
-    <input type="email" id="server-username" name="server-username" placeholder="Enter email address">
+    <label for="clipsync-username">Email:</label>
+    <input type="email" id="clipsync-username" name="clipsync-username" placeholder="Enter email address">
   </div>
   <div class="form-group">
-    <label for="server-password">Password:</label>
-    <input type="password" id="server-password" name="server-password" placeholder="Enter password">
+    <label for="clipsync-password">Password:</label>
+    <input type="password" id="clipsync-password" name="clipsync-password" placeholder="Enter password">
   </div>
 </fieldset>
 <div id="errorBox" class="error" style="display: none; color: red; font-size: 0.9em; margin-top: 2px;">
   Please enter a valid URL (e.g., https://example.com)
 </div>
 <button id="sync">Sync bookmarks</button>
+<button id="reset">Reset</button>
 <script src="popup.js"></script>
 </body>
 </html>

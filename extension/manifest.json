@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Clipsync",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "Syncs bookmarks",
   "permissions": ["bookmarks", "storage", "alarms"],
   "host_permissions": ["http://*", "https://*"],

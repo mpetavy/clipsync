@@ -16,6 +16,8 @@ function updateTheme() {
 }
 
 function showError(text) {
+    console.error(text);
+
     errorBox.textContent = text
     errorBox.style.display = 'block';
 
@@ -24,10 +26,10 @@ function showError(text) {
     }, 2000)
 }
 
-function saveSettings(storageObj) {
+function saveSettings(settings) {
     console.log('saveSettings');
 
-    chrome.storage.local.set(storageObj, function () {
+    chrome.storage.local.set(settings, function () {
         console.log('settings saved');
     });
 }
@@ -36,27 +38,45 @@ function loadSettings() {
     console.log('loadSettings');
 
     return new Promise((resolve) => {
-        chrome.storage.local.get(null, function (result) {
+        chrome.storage.local.get(null, function (settings) {
             console.log('settings loaded');
-            resolve(result);
+            resolve(settings);
         });
     });
 }
 
-function updateSettings() {
-    console.log('updateSettings');
+function deleteSettings() {
+    console.log('deleteSettings');
+
+    chrome.storage.local.clear(function() {
+        console.log('settings deleted');
+    });
+}
+
+function refreshSettings() {
+    console.log('refreshSettings');
+
+    const url = document.getElementById("clipsync-url");
+    const username = document.getElementById("clipsync-username");
+    const password = document.getElementById("clipsync-password");
+
+    url.value = "http://localhost:8443";
+    username.value = "petavy@gmx.net";
+    password.value = "11111111";
+
+    pluginInitialized = false;
 
     loadSettings().then(data => {
-        const serverUrl = document.getElementById("server-url");
-        const serverUsername = document.getElementById("server-username");
-        const serverPassword = document.getElementById("server-password");
+        if (data.url) url.value = data.url;
+        if (data.username) username.value = data.username;
+        if (data.password) password.value = data.password;
 
-        if (data.serverUrl) serverUrl.value = data.serverUrl;
-        if (data.serverUsername) serverUsername.value = data.serverUsername;
-        if (data.serverPassword) serverPassword.value = data.serverPassword;
+        pluginInitialized = data.pluginInitialized;
     }).catch(error => {
         console.error('Error loading data:', error);
     });
+
+    url.focus();
 }
 
 async function sha256(message) {
@@ -73,55 +93,71 @@ async function sha256(message) {
 
 updateLegend();
 updateTheme();
-updateSettings();
+
+refreshSettings();
+
+serverHasAlreadyBookmarks = false;
+pluginInitialized = false;
 
 window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateTheme);
 
 document.getElementById("sync").addEventListener("click", async () => {
-    const serverUrl = document.getElementById("server-url").value;
-    const serverUsername = document.getElementById("server-username").value;
-    const serverPassword = document.getElementById("server-password").value;
+    const url = document.getElementById("clipsync-url").value;
+    const username = document.getElementById("clipsync-username").value;
+    const password = document.getElementById("clipsync-password").value;
 
     saveSettings({
-        "serverUrl": serverUrl,
-        "serverUsername": serverUsername,
-        "serverPassword": serverPassword
+        "url": url,
+        "username": username,
+        "password": password,
+        "pluginInitialized": true
     });
 
-    try {
-        new URL(serverUrl);
+    const encUsername = await sha256(username);
+    const encPassword = await sha256(password);
 
-        fetch(serverUrl + "/sync", {
-            method: "HEAD",
-        }).then(response => {
-            // Handle the fetch response if needed
-        }).catch(error => {
-            console.error("Fetch error:", error);
+    try {
+        new URL(url);
+
+        const response = await fetch(url + "/api/v1/sync", {
+            headers: {
+                "username": encUsername,
+                "password": encPassword,
+            },
         });
+
+        serverHasAlreadyBookmarks = response.status === 200 ? true : false;
     } catch (e) {
-        showError("Please enter a valid URL! (" + e.message + ")");
+        showError("Please enter a valid URL! (" + e + ")");
         return;
     }
 
-    if (!serverPassword || serverPassword.length < 8) {
+    if (!password || password.length < 8) {
         showError("Please enter a valid password!");
         return;
     }
 
-    const encUsername = await sha256(serverUsername);
-    const encPassword = await sha256(serverPassword);
-
     chrome.runtime.sendMessage({
         action: "sync",
-        serverUrl: serverUrl,
-        serverUsername: encUsername,
-        serverPassword: encPassword
+        url: url,
+        username: encUsername,
+        password: encPassword,
+        serverHasAlreadyBookmarks: serverHasAlreadyBookmarks,
+        pluginInitialized: pluginInitialized
     }, (response) => {
         if (chrome.runtime.lastError) {
             console.error("Error sending message:", chrome.runtime.lastError);
         } else if (response && response.status === "success") {
             console.log("Sync triggered successfully.");
-            window.close();
+
+            //FIXME
+            // window.close();
         }
     });
+});
+
+document.getElementById("reset").addEventListener("click", async () => {
+    deleteSettings();
+
+    refreshSettings();
 });

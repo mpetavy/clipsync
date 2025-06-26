@@ -81,7 +81,7 @@ func BasicAuth(r *http.Request, username, password string) error {
 	}
 
 	err := func() error {
-		serverPassword, err := common.HashValue(crypto.SHA256, *httpPassword)
+		password, err := common.HashValue(crypto.SHA256, *httpPassword)
 		if common.Error(err) {
 			return err
 		}
@@ -90,7 +90,7 @@ func BasicAuth(r *http.Request, username, password string) error {
 			return ErrBasicAuth
 		}
 
-		return common.CompareHashes(serverPassword, password)
+		return common.CompareHashes(password, password)
 	}()
 	if err != nil {
 		common.Sleep(time.Second * 5)

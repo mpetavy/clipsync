@@ -1,6 +1,6 @@
- chrome.runtime.onMessage.addListener((message, sender, chromeResponse) => {
+chrome.runtime.onMessage.addListener((message, sender, chromeResponse) => {
     if (message.action === "sync") {
-        processBookmarks(message,chromeResponse).catch(error => {
+        processBookmarks(message, chromeResponse).catch(error => {
             console.error("Bookmark processing failed:", error);
             chromeResponse({status: "error", error: error.message});
         });
@@ -20,18 +20,26 @@
 //     });
 // });
 
-let inProcessBookmarks = 0;
+inProcessBookmarks = 0;
 
-async function processBookmarks(message,sendResponse) {
+async function processBookmarks(message, sendResponse) {
     if (inProcessBookmarks === 1) {
         return
     }
+
     try {
         inProcessBookmarks = 1;
 
-        await backupBookmarks(message);
+        if (!message.pluginInitialized) {
+            if (!message.serverHasAlreadyBookmarks) {
+                await backupBookmarks(message);
+            }
+        }
+
         await restoreBookmarks(message);
+
         console.log("Bookmarks synced!");
+
         if (sendResponse) {
             sendResponse({status: "success"});
         }
@@ -55,12 +63,12 @@ async function backupBookmarks(message) {
 
     const jsonString = JSON.stringify(rootTree, null, 2);
 
-    const response = await fetch(message.serverUrl + "/sync", {
+    const response = await fetch(message.url + "/api/v1/sync", {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
-            "username": message.serverUsername,
-            "password": message.serverPassword,
+            "username": message.username,
+            "password": message.password,
         },
         body: jsonString
     });
@@ -119,14 +127,14 @@ async function clearBookmarks() {
 async function restoreBookmarks(message) {
     await clearBookmarks();
 
-    const response = await fetch(message.serverUrl + "/sync", {
+    const response = await fetch(message.url + "/api/v1/sync", {
         headers: {
-            "username": message.serverUsername,
-            "password": message.serverPassword,
+            "username": message.username,
+            "password": message.password,
         },
     });
 
-    let bookmarks = await response.json();
+    bookmarks = await response.json();
 
     for (const bookmark of bookmarks[0].children) {
         await addBookmark(bookmark, 0);
