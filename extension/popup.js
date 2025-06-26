@@ -65,7 +65,7 @@ function deleteSettings() {
 function refreshSettings() {
     console.log('refreshSettings');
 
-    elementUrl.value = "http://localhost:8443";
+    elementUrl.value = "http://pop-os:8443";
     elementUsername.value = "petavy@gmx.net";
     elementPassword.value = "11111111";
 
