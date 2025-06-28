@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "description": "Syncs bookmarks",
   "permissions": ["bookmarks", "storage", "alarms"],
-  "host_permissions": ["http://*", "https://*"],
+  "host_permissions": ["http://pop-os:8443/*", "https://pop-os:8443/*"],
   "background": {
     "service_worker": "background.js"
   },

@@ -1,12 +1,12 @@
 package main
 
 import (
-	"crypto"
 	"crypto/tls"
 	"flag"
 	"fmt"
 	"github.com/mpetavy/common"
 	"github.com/pbnjay/memory"
+	"github.com/rs/cors"
 	orderedmap "github.com/wk8/go-ordered-map/v2"
 	"net/http"
 	"os"
@@ -20,11 +20,9 @@ import (
 )
 
 var (
-	httpPort     = flag.Int("http.port", 8443, "HTTP server port")
-	httpTLS      = flag.Bool("http.tls", true, "HTTP server TLS")
-	httpAuth     = flag.Bool("http.auth", true, "HTTP authentication enabled")
-	httpUsername = flag.String("http.username", common.RndString(30), "HTTP username")
-	httpPassword = flag.String("http.password", common.RndString(30), "HTTP password")
+	httpPort = flag.Int("http.port", 8443, "HTTP server port")
+	httpTLS  = flag.Bool("http.tls", true, "HTTP server TLS")
+	httpAuth = flag.Bool("http.auth", true, "HTTP authentication enabled")
 
 	server *Server
 )
@@ -81,19 +79,22 @@ func BasicAuth(r *http.Request, username, password string) error {
 	}
 
 	err := func() error {
-		password, err := common.HashValue(crypto.SHA256, *httpPassword)
-		if common.Error(err) {
-			return err
+		bm, err := server.Bookmarks.Find(NewWhereTerm().Where(WhereItem{
+			Fieldname: BookmarkSchema.Username,
+			Operator:  "=",
+			Value:     username,
+		}))
+
+		if err == ErrNotFound || bm.Password.String() == password {
+			return nil
 		}
 
-		if *httpUsername != username {
-			return ErrBasicAuth
-		}
-
-		return common.CompareHashes(password, password)
+		return ErrBasicAuth
 	}()
 	if err != nil {
-		common.Sleep(time.Second * 5)
+		if common.IsRunningAsExecutable() {
+			common.Sleep(time.Second * 5)
+		}
 
 		return ErrBasicAuth
 	}
@@ -122,6 +123,10 @@ func NewServer() error {
 
 	// Database
 
+	//server.HandlerFunc(HeadSync, "Head sync", true, common.BasicAuthHandler(true, BasicAuth, common.TelemetryHandler(server.headSyncHandler)))
+	//server.HandlerFunc(GetSync, "Get sync", true, common.BasicAuthHandler(true, BasicAuth, common.TelemetryHandler(server.getSyncHandler)))
+	//server.HandlerFunc(PutSync, "Put sync status", true, common.BasicAuthHandler(true, BasicAuth, common.TelemetryHandler(server.putSyncHandler)))
+	//server.HandlerFunc(GetStatus, "Get status", true, common.BasicAuthHandler(true, BasicAuth, common.TelemetryHandler(server.getStatusHandler)))
 	server.HandlerFunc(HeadSync, "Head sync", true, common.ConcurrentLimitHandler(common.BasicAuthHandler(true, BasicAuth, common.TelemetryHandler(server.headSyncHandler))))
 	server.HandlerFunc(GetSync, "Get sync", true, common.ConcurrentLimitHandler(common.BasicAuthHandler(true, BasicAuth, common.TelemetryHandler(server.getSyncHandler))))
 	server.HandlerFunc(PutSync, "Put sync status", true, common.ConcurrentLimitHandler(common.BasicAuthHandler(true, BasicAuth, common.TelemetryHandler(server.putSyncHandler))))
@@ -201,7 +206,7 @@ func (server *Server) Start() error {
 		}
 	}
 
-	err = common.HTTPServerStart(*httpPort, tlsConfig, server.Mux)
+	err = common.HTTPServerStart(*httpPort, tlsConfig, cors.Default().Handler(server.Mux))
 	if common.Error(err) {
 		return err
 	}

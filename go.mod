@@ -4,7 +4,7 @@ go 1.24.1
 
 require (
 	github.com/fatih/structtag v1.2.0
-	github.com/mpetavy/common v1.10.36
+	github.com/mpetavy/common v1.10.37
 	github.com/pbnjay/memory v0.0.0-20210728143218-7b4eea64cf58
 	github.com/spyzhov/ajson v0.9.6
 	github.com/stretchr/testify v1.10.0

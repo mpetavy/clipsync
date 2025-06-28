@@ -28,38 +28,6 @@ var (
 	GetStatus = common.NewRestURL(http.MethodGet, REST_STATUS)
 )
 
-const (
-	PARAM_USERNAME = "username"
-	PARAM_PASSWORD = "password"
-)
-
-func init() {
-	GetSync.Params = append(GetSync.Params, common.RestURLField{
-		Name:        PARAM_USERNAME,
-		Description: "Username",
-		Default:     "",
-		Mandatory:   true,
-	})
-	GetSync.Params = append(GetSync.Params, common.RestURLField{
-		Name:        PARAM_PASSWORD,
-		Description: "Password",
-		Default:     "",
-		Mandatory:   true,
-	})
-	PutSync.Params = append(PutSync.Params, common.RestURLField{
-		Name:        PARAM_USERNAME,
-		Description: "Username",
-		Default:     "",
-		Mandatory:   true,
-	})
-	PutSync.Params = append(PutSync.Params, common.RestURLField{
-		Name:        PARAM_PASSWORD,
-		Description: "Password",
-		Default:     "",
-		Mandatory:   true,
-	})
-}
-
 func (server *Server) headSyncHandler(w http.ResponseWriter, r *http.Request) {
 	common.DebugFunc()
 
@@ -76,7 +44,7 @@ func (server *Server) getSyncHandler(w http.ResponseWriter, r *http.Request) {
 			return nil, err
 		}
 
-		username := r.Header.Get(PARAM_USERNAME)
+		username, _, _ := r.BasicAuth()
 
 		bm, err := server.CrudBookmarks.Repository.Find(NewWhereTerm().Where(WhereItem{BookmarkSchema.Username, "=", username}))
 		if common.Error(err) {
@@ -103,24 +71,23 @@ func (server *Server) putSyncHandler(w http.ResponseWriter, r *http.Request) {
 			return err
 		}
 
-		username := r.Header.Get(PARAM_USERNAME)
-		password := r.Header.Get(PARAM_PASSWORD)
+		username, password, _ := r.BasicAuth()
 
 		ba, err := common.ReadBody(r.Body)
 		if common.Error(err) {
 			return err
 		}
 
-		r, err := ajson.JSONPath(ba, "$..dateAdded")
+		_, err = ajson.JSONPath(ba, "$..dateAdded")
 		if err != nil {
 			return err
 		}
 
-		if len(r) == 3 {
-			common.Info("Do not save empty bookmark list")
-
-			return nil
-		}
+		//if len(jo) == 3 {
+		//	common.Info("Do not save empty bookmark list")
+		//
+		//	return nil
+		//}
 
 		bm, err := server.CrudBookmarks.Repository.Find(NewWhereTerm().Where(WhereItem{BookmarkSchema.Username, "=", username}))
 		switch err {

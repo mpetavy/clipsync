@@ -1,7 +1,7 @@
 chrome.runtime.onMessage.addListener((message, sender, chromeResponse) => {
     if (message.action === "sync") {
         processBookmarks(message, chromeResponse).catch(error => {
-            console.error("Bookmark processing failed:", error);
+            console.error(error);
             chromeResponse({status: "error", error: error.message});
         });
         return true; // Indicates async response
@@ -10,13 +10,13 @@ chrome.runtime.onMessage.addListener((message, sender, chromeResponse) => {
 
 // chrome.bookmarks.onCreated.addListener(() => {
 //     processBookmarks().catch(error => {
-//         console.error("Bookmark processing failed:", error);
+//         console.error(error);
 //     });
 // });
 //
 // chrome.bookmarks.onRemoved.addListener(() => {
 //     processBookmarks().catch(error => {
-//         console.error("Bookmark processing failed:", error);
+//         console.error(error);
 //     });
 // });
 
@@ -46,7 +46,7 @@ async function processBookmarks(message, sendResponse) {
     } catch (error) {
         inProcessBookmarks = 0;
 
-        console.error("Sync failed:", error);
+        console.error(error);
         if (sendResponse) {
             sendResponse({status: "error", error: error.message});
         }
@@ -63,12 +63,12 @@ async function backupBookmarks(message) {
 
     const jsonString = JSON.stringify(rootTree, null, 2);
 
+    const credentials = btoa(message.username + ":"+ message.password);
     const response = await fetch(message.url + "/api/v1/sync", {
         method: "PUT",
         headers: {
+            "Authorization": "Basic " + credentials,
             "Content-Type": "application/json",
-            "username": message.username,
-            "password": message.password,
         },
         body: jsonString
     });
@@ -127,10 +127,10 @@ async function clearBookmarks() {
 async function restoreBookmarks(message) {
     await clearBookmarks();
 
+    const credentials = btoa(message.username + ":"+ message.password);
     const response = await fetch(message.url + "/api/v1/sync", {
         headers: {
-            "username": message.username,
-            "password": message.password,
+            "Authorization": "Basic " + credentials
         },
     });
 

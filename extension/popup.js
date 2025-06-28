@@ -60,6 +60,8 @@ function deleteSettings() {
     chrome.storage.local.clear(function() {
         console.log('settings deleted');
     });
+
+    pluginInitialized = true;
 }
 
 function refreshSettings() {
@@ -78,7 +80,7 @@ function refreshSettings() {
 
         pluginInitialized = data.pluginInitialized;
     }).catch(error => {
-        console.error('Error loading data:', error);
+        console.error(error);
     });
 
     elementUrl.focus();
@@ -115,16 +117,15 @@ elementButtonSync.addEventListener("click", async () => {
         "pluginInitialized": true
     });
 
-    const encUsername = await sha256(username);
     const encPassword = await sha256(password);
 
     try {
         new URL(url);
 
+        const credentials = btoa(username + ":"+ encPassword);
         const response = await fetch(url + "/api/v1/sync", {
             headers: {
-                "username": encUsername,
-                "password": encPassword,
+                "Authorization": "Basic " + credentials
             },
         });
 
@@ -142,18 +143,17 @@ elementButtonSync.addEventListener("click", async () => {
     chrome.runtime.sendMessage({
         action: "sync",
         url: url,
-        username: encUsername,
+        username: username,
         password: encPassword,
         serverHasAlreadyBookmarks: serverHasAlreadyBookmarks,
         pluginInitialized: pluginInitialized
     }, (response) => {
         if (chrome.runtime.lastError) {
-            console.error("Error sending message:", chrome.runtime.lastError);
+            console.error(chrome.runtime.lastError);
         } else if (response && response.status === "success") {
             console.log("Sync triggered successfully.");
 
-            //FIXME
-            // window.close();
+            window.close();
         }
     });
 });
