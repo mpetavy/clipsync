@@ -4,8 +4,9 @@ go 1.24.1
 
 require (
 	github.com/fatih/structtag v1.2.0
-	github.com/mpetavy/common v1.10.37
+	github.com/mpetavy/common v1.10.38
 	github.com/pbnjay/memory v0.0.0-20210728143218-7b4eea64cf58
+	github.com/rs/cors v1.11.1
 	github.com/spyzhov/ajson v0.9.6
 	github.com/stretchr/testify v1.10.0
 	github.com/wk8/go-ordered-map/v2 v2.1.8
@@ -47,7 +48,6 @@ require (
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/quasoft/memstore v0.0.0-20191010062613-2bce066d2b0b // indirect
 	github.com/rogpeppe/go-internal v1.13.1 // indirect
-	github.com/rs/cors v1.11.1 // indirect
 	github.com/saintfish/chardet v0.0.0-20230101081208-5e3ef4b5456d // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasttemplate v1.2.2 // indirect
