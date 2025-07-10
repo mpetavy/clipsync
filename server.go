@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"github.com/mpetavy/common"
+	"github.com/mpetavy/common/sqldb"
 	"github.com/pbnjay/memory"
 	"github.com/rs/cors"
 	orderedmap "github.com/wk8/go-ordered-map/v2"
@@ -27,19 +28,17 @@ var (
 	server *Server
 )
 
-type MuxHandlerFunc func(restURL *common.RestURL, description string, needsAuth bool, handler http.HandlerFunc)
-
 type Server struct {
-	MuxHandlerFunc
+	sqldb.CRUDHandlerFunc
 	Cfg             *ClipsyncCfg
 	Mux             *http.ServeMux
 	Database        *Database
 	Endpoints       *common.StringTable
 	EndpointDetails *common.StringTable
-	Bookmarks       *Repository[Bookmark]
-	Logs            *Repository[Log]
-	CrudBookmarks   *CRUD[Bookmark]
-	CrudLogs        *CRUD[Log]
+	Bookmarks       *sqldb.Repository[Bookmark]
+	Logs            *sqldb.Repository[Log]
+	CrudBookmarks   *sqldb.CRUD[Bookmark]
+	CrudLogs        *sqldb.CRUD[Log]
 }
 
 type ServerHealth struct {
@@ -79,13 +78,13 @@ func BasicAuth(r *http.Request, username, password string) error {
 	}
 
 	err := func() error {
-		bm, err := server.Bookmarks.Find(NewWhereTerm().Where(WhereItem{
+		bm, err := server.Bookmarks.FindFirst(sqldb.NewWhereTerm().Where(sqldb.WhereItem{
 			Fieldname: BookmarkSchema.Username,
 			Operator:  "=",
 			Value:     username,
 		}))
 
-		if err == ErrNotFound || bm.Password.String() == password {
+		if err == sqldb.ErrNotFound || bm.Password.String() == password {
 			return nil
 		}
 
@@ -150,22 +149,22 @@ func NewServer() error {
 		return err
 	}
 
-	server.Bookmarks, err = NewRepository[Bookmark](server.Database)
+	server.Bookmarks, err = sqldb.NewRepository[Bookmark](server.Database.Gorm)
 	if common.Error(err) {
 		return err
 	}
 
-	server.CrudBookmarks, err = NewCrud[Bookmark](server.HandlerFunc, server.Bookmarks, BasicAuth, REST_BOOKMARKS)
+	server.CrudBookmarks, err = sqldb.NewCrud[Bookmark](server.HandlerFunc, server.Bookmarks, BasicAuth, REST_BOOKMARKS)
 	if common.Error(err) {
 		return err
 	}
 
-	server.Logs, err = NewRepository[Log](server.Database)
+	server.Logs, err = sqldb.NewRepository[Log](server.Database.Gorm)
 	if common.Error(err) {
 		return err
 	}
 
-	server.CrudLogs, err = NewCrud[Log](server.HandlerFunc, server.Logs, BasicAuth, REST_LOGS)
+	server.CrudLogs, err = sqldb.NewCrud[Log](server.HandlerFunc, server.Logs, BasicAuth, REST_LOGS)
 	if common.Error(err) {
 		return err
 	}

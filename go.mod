@@ -4,7 +4,7 @@ go 1.24.1
 
 require (
 	github.com/fatih/structtag v1.2.0
-	github.com/mpetavy/common v1.10.38
+	github.com/mpetavy/common v1.10.42
 	github.com/pbnjay/memory v0.0.0-20210728143218-7b4eea64cf58
 	github.com/rs/cors v1.11.1
 	github.com/spyzhov/ajson v0.9.6
@@ -20,7 +20,7 @@ require (
 	github.com/buger/jsonparser v1.1.1 // indirect
 	github.com/creack/goselect v0.1.2 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
-	github.com/dlclark/regexp2 v1.11.2 // indirect
+	github.com/dlclark/regexp2 v1.11.4 // indirect
 	github.com/gabriel-vasile/mimetype v1.4.2 // indirect
 	github.com/go-ini/ini v1.67.0 // indirect
 	github.com/google/uuid v1.6.0 // indirect

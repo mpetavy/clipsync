@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/mpetavy/common"
+	"github.com/mpetavy/common/sqldb"
 	"github.com/spyzhov/ajson"
 	"net/http"
 	"strings"
@@ -46,7 +47,7 @@ func (server *Server) getSyncHandler(w http.ResponseWriter, r *http.Request) {
 
 		username, _, _ := r.BasicAuth()
 
-		bm, err := server.CrudBookmarks.Repository.Find(NewWhereTerm().Where(WhereItem{BookmarkSchema.Username, "=", username}))
+		bm, err := server.CrudBookmarks.Repository.FindFirst(sqldb.NewWhereTerm().Where(sqldb.WhereItem{BookmarkSchema.Username, "=", username}))
 		if common.Error(err) {
 			return nil, err
 		}
@@ -89,10 +90,10 @@ func (server *Server) putSyncHandler(w http.ResponseWriter, r *http.Request) {
 		//	return nil
 		//}
 
-		bm, err := server.CrudBookmarks.Repository.Find(NewWhereTerm().Where(WhereItem{BookmarkSchema.Username, "=", username}))
+		bm, err := server.CrudBookmarks.Repository.FindFirst(sqldb.NewWhereTerm().Where(sqldb.WhereItem{BookmarkSchema.Username, "=", username}))
 		switch err {
 		case nil:
-		case ErrNotFound:
+		case sqldb.ErrNotFound:
 			bm, err = NewBookmark()
 			if common.Error(err) {
 				return err
