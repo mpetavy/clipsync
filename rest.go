@@ -66,7 +66,7 @@ func (server *Server) getSyncHandler(w http.ResponseWriter, r *http.Request) {
 func (server *Server) putSyncHandler(w http.ResponseWriter, r *http.Request) {
 	common.DebugFunc()
 
-	err := server.Database.RunSynchronized(func() error {
+	err := server.Database.ORM.Synchronized(func() error {
 		err := PutSync.Validate(r)
 		if common.Error(err) {
 			return err

@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"github.com/mpetavy/common"
+	"github.com/mpetavy/common/orm"
 	"github.com/mpetavy/common/sqldb"
 	"github.com/pbnjay/memory"
 	"github.com/rs/cors"
@@ -36,9 +37,9 @@ type Server struct {
 	Endpoints       *common.StringTable
 	EndpointDetails *common.StringTable
 	Bookmarks       *sqldb.Repository[Bookmark]
-	Logs            *sqldb.Repository[Log]
+	Logs            *sqldb.Repository[orm.Log]
 	CrudBookmarks   *sqldb.CRUD[Bookmark]
-	CrudLogs        *sqldb.CRUD[Log]
+	CrudLogs        *sqldb.CRUD[orm.Log]
 }
 
 type ServerHealth struct {
@@ -149,7 +150,7 @@ func NewServer() error {
 		return err
 	}
 
-	server.Bookmarks, err = sqldb.NewRepository[Bookmark](server.Database.Gorm)
+	server.Bookmarks, err = sqldb.NewRepository[Bookmark](server.Database.ORM.Gorm)
 	if common.Error(err) {
 		return err
 	}
@@ -159,12 +160,12 @@ func NewServer() error {
 		return err
 	}
 
-	server.Logs, err = sqldb.NewRepository[Log](server.Database.Gorm)
+	server.Logs, err = sqldb.NewRepository[orm.Log](server.Database.ORM.Gorm)
 	if common.Error(err) {
 		return err
 	}
 
-	server.CrudLogs, err = sqldb.NewCrud[Log](server.HandlerFunc, server.Logs, BasicAuth, REST_LOGS)
+	server.CrudLogs, err = sqldb.NewCrud[orm.Log](server.HandlerFunc, server.Logs, BasicAuth, REST_LOGS)
 	if common.Error(err) {
 		return err
 	}
